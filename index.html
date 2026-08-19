@@ -86,6 +86,96 @@
       /* Bölüm ayırıcı */
       .section-sep { height:2px; background: linear-gradient(to right, rgba(0,0,0,0), rgba(122,0,31,.35), rgba(0,0,0,0)); max-width: 1100px; margin: 0 auto 24px; border-radius:2px }
 
+      /* Kentsel dönüşüm faaliyet alanı */
+      .urban-renewal {
+        position: relative;
+        overflow: hidden;
+        color: var(--white);
+        background:
+          radial-gradient(circle at 88% 10%, rgba(122,0,31,.42), transparent 34%),
+          linear-gradient(145deg, #07090d 0%, #111827 58%, #240711 100%);
+      }
+      .urban-renewal::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+        background-size: 44px 44px;
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,.9), transparent 85%);
+      }
+      .urban-renewal .container { position: relative; }
+      .urban-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+        color: #e4c7cf;
+        font-size: 13px;
+        font-weight: 750;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .urban-kicker::before { content: ""; width: 42px; height: 2px; background: #b94b68; }
+      .urban-lead {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
+        gap: 48px;
+        align-items: end;
+        margin-bottom: 42px;
+      }
+      .urban-lead h2 { margin: 0; font-size: clamp(34px, 5vw, 56px); line-height: 1.08; }
+      .urban-lead p { margin: 0; color: #d1d5db; font-size: 17px; line-height: 1.8; }
+      .urban-services {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .urban-service {
+        min-height: 250px;
+        padding: 28px;
+        border: 1px solid rgba(255,255,255,.13);
+        border-radius: 14px;
+        background: rgba(255,255,255,.055);
+        box-shadow: 0 18px 45px rgba(0,0,0,.18);
+        backdrop-filter: blur(8px);
+      }
+      .urban-service .number {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 24px;
+        border: 1px solid rgba(255,255,255,.24);
+        border-radius: 50%;
+        color: #f2d8df;
+        font-size: 13px;
+        font-weight: 800;
+      }
+      .urban-service h3 { margin: 0 0 14px; color: #fff; font-size: 21px; }
+      .urban-service p { margin: 0; color: #c7cbd3; line-height: 1.75; }
+      .urban-note {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        margin-top: 22px;
+        padding: 22px 26px;
+        border-left: 3px solid #b94b68;
+        background: rgba(255,255,255,.04);
+      }
+      .urban-note p { margin: 0; color: #e5e7eb; line-height: 1.65; }
+      .urban-note a {
+        flex: 0 0 auto;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255,255,255,.55);
+        padding-bottom: 3px;
+      }
+
       /* Mobil düzenler */
       @media (max-width: 768px) {
         .container { padding: 0 12px; }
@@ -115,6 +205,10 @@
         .grid-3 { grid-template-columns: 1fr; }
         #calisma-alanlari .container > div[style^="display:grid"] { grid-template-columns: 1fr !important; }
         #iletisim .container > div[style^="display:grid"] { grid-template-columns: 1fr !important; }
+        .urban-lead { grid-template-columns: 1fr; gap: 18px; margin-bottom: 30px; }
+        .urban-services { grid-template-columns: 1fr; }
+        .urban-service { min-height: 0; padding: 24px; }
+        .urban-note { align-items: flex-start; flex-direction: column; }
 
         footer .container > div { flex-direction: column !important; gap: 20px; }
         footer .container > div > div { flex: 1 1 auto !important; width: 100%; }
@@ -152,6 +246,11 @@
       .chatbot-fab img { width:100%; height:100%; object-fit: cover; border-radius: 50%; display:block }
       .chatbot-initials { display:none; width:100%; height:100%; border-radius:50%; background:#111827; color:#fff; font-weight:700; font-size:12px; letter-spacing:.5px; align-items:center; justify-content:center }
       @media (max-width:480px){ .chatbot-bubble{ max-width:220px; font-size:13px } }
+      @media (min-width: 769px) and (max-width: 1120px) {
+        header nav a { margin-left: 10px; font-size: 12px; }
+        header nav a.contact-btn,
+        header nav a.blogs-btn { padding: 7px 10px; }
+      }
       /* Çok küçük ekranlar (<=480px) */
       @media (max-width: 480px) {
         .logo { height: 44px; }
@@ -160,6 +259,9 @@
         .hero { min-height: 70vh; }
         .hero .wrap h1 { font-size: 24px !important; }
         .btn { padding: 9px 14px; font-size: 14px; }
+        .urban-lead h2 { font-size: 32px; }
+        .urban-lead p { font-size: 15px; }
+        .urban-note { padding: 20px; }
       }
       /* Tablet ve üstü için ufak iyileştirme */
       @media (min-width: 1024px) {
@@ -204,6 +306,7 @@
         <nav>
           <a href="#hakkimizda" class="burgundy">Hakkımızda</a>
           <a href="#calisma-alanlari">Çalışma Alanları</a>
+          <a href="#kentsel-donusum">Kentsel Dönüşüm</a>
           <a href="avukatlar.html">Ekibimiz</a>
           <a href="#kariyer">Kariyer</a>
           <a href="#blogs" class="blogs-btn">Blogs</a>
@@ -318,7 +421,60 @@
         </div>
       </section>
 
-      
+      <section id="kentsel-donusum" class="urban-renewal" aria-labelledby="kentsel-donusum-baslik">
+        <div class="container">
+          <span class="urban-kicker">Faaliyet Alanı</span>
+          <div class="urban-lead">
+            <h2 id="kentsel-donusum-baslik">Kentsel Dönüşüm Hukuku</h2>
+            <p>
+              Büromuz, 6306 sayılı Kanun ve ilgili mevzuat kapsamında kentsel dönüşüm
+              süreçlerinde kat maliklerine, yüklenicilere ve diğer ilgililere hukuki
+              danışmanlık ve temsil hizmeti sunmaktadır.
+            </p>
+          </div>
+
+          <div class="urban-services">
+            <article class="urban-service">
+              <span class="number" aria-hidden="true">01</span>
+              <h3>Risk Tespiti ve İdari Süreç</h3>
+              <p>
+                Riskli yapı tespiti ve kesinleşme aşaması ile tapu belirtmeleri ve yasal
+                itiraz sürelerinin takibi; tapu, arsa payı, yönetim planı ve imar
+                belgelerinin hukuki yönden incelenmesi.
+              </p>
+            </article>
+
+            <article class="urban-service">
+              <span class="number" aria-hidden="true">02</span>
+              <h3>Malik Kararları ve Müzakere</h3>
+              <p>
+                Paydaşların hisseleri oranında salt çoğunlukla alınacak kararların,
+                toplantı ve bildirim süreçlerinin mevzuata uygun hazırlanması; yüklenici
+                tekliflerinin ve paylaşım esaslarının hukuki yönden değerlendirilmesi.
+              </p>
+            </article>
+
+            <article class="urban-service">
+              <span class="number" aria-hidden="true">03</span>
+              <h3>Sözleşme ve Uygulama</h3>
+              <p>
+                Gecikme tazminatı, kademeli tapu devri, teminatlar, zemin maliyetleri ve
+                finansal denkleştirme hükümlerinin düzenlenmesi; tapu, noter, belediye,
+                teslim ve iskân aşamaları ile doğabilecek uyuşmazlıkların takibi.
+              </p>
+            </article>
+          </div>
+
+          <div class="urban-note">
+            <p>
+              Hizmetin kapsamı, her yapının hukuki durumu ve proje belgeleri incelenerek
+              somut sürecin özelliklerine göre belirlenmektedir.
+            </p>
+            <a href="#iletisim">İletişim bilgileri</a>
+          </div>
+        </div>
+      </section>
+
       <section id="blogs" style="background:var(--darkblue);color:var(--white);padding:80px 0; overflow:hidden">
         <div class="container">
           <h2 style="font-size:38px;font-weight:800;color:#fff;margin-bottom:24px;text-align:center;letter-spacing:0.5px">Blogs</h2>
@@ -346,7 +502,7 @@
       <section id="kariyer" style="background:linear-gradient(135deg, rgba(11,11,11,.8) 0%, rgba(122,0,31,.7) 60%, rgba(11,11,11,.8) 100%);color:var(--white);position:relative">
         <div class="container">
           <h2 style="font-size:32px;font-weight:800;color:var(--white);margin-bottom:18px">Kariyer</h2>
-          <p style="color:var(--white);line-height:1.7">Analitik düşünen, araştırmaya meraklı, iletişimi güçlü ekip arkadaşlarıyla çalışmaktan memnuniyet duyuyoruz. CV ve niyet mektubunuzu <a href="mailto:agacsenturk@gmail.com" style="color:var(--white);font-weight:600;text-decoration:underline">agacsenturk@gmail.com</a> adresine iletebilirsiniz.</p>
+          <p style="color:var(--white);line-height:1.7">Analitik düşünen, araştırmaya meraklı, iletişimi güçlü ekip arkadaşlarıyla çalışmaktan memnuniyet duyuyoruz. CV ve niyet mektubunuzu <a href="mailto:info@agacsenturk.com" style="color:var(--white);font-weight:600;text-decoration:underline">info@agacsenturk.com</a> adresine iletebilirsiniz.</p>
         </div>
       </section>
 
@@ -400,8 +556,8 @@
                   </svg>
                   E-posta
                 </h3>
-                <a href="mailto:agacsenturk@gmail.com" style="color:var(--burgundy);text-decoration:none;font-size:18px;font-weight:500">
-                  agacsenturk@gmail.com
+                <a href="mailto:info@agacsenturk.com" style="color:var(--burgundy);text-decoration:none;font-size:18px;font-weight:500">
+                  info@agacsenturk.com
                 </a>
               </div>
             </div>
@@ -474,7 +630,7 @@
               </p>
               <p style="margin:12px 0">
                 <a href="tel:+905454402501" style="color:var(--white);text-decoration:none;opacity:0.9">+90 545 440 2501</a><br/>
-                <a href="mailto:agacsenturk@gmail.com" style="color:var(--white);text-decoration:none;opacity:0.9">agacsenturk@gmail.com</a>
+                <a href="mailto:info@agacsenturk.com" style="color:var(--white);text-decoration:none;opacity:0.9">info@agacsenturk.com</a>
               </p>
             </div>
             <div style="flex:0 0 300px">
@@ -493,7 +649,7 @@
         </div>
         <div style="text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1)">
           <p style="color:var(--white);opacity:0.85;margin:0 0 6px">© <span id="y"></span> Ağaç & Şentürk Law Office. Tüm hakları saklıdır.</p>
-          <p style="color:var(--white);opacity:0.6;font-size:14px;margin:0">Bu websitesi Avukat Talha AĞAÇ tarafından hazırlanmıştır.</p>
+          <p style="color:var(--white);opacity:0.6;font-size:14px;margin:0">Bu websitesi NG Technology tarafından hazırlanmıştır.</p>
         </div>
       </div>
     </footer>
@@ -553,10 +709,10 @@
       const form = document.getElementById('ng-form');
       const input = document.getElementById('ng-input');
       const msgs = document.getElementById('ng-msgs');
-      const AUTO_REPLY = 'Bu konuda avukatlarımız ile iletişime geçmenizi öneriyorum.\nİletişim için: Telefon: +90 545 440 2501 - E-posta: agacsenturk@gmail.com\nVeya tüm hukuki sorunlarınıza çözüm bulmak amacıyla ofisimize Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10,\n34403 Kağıthane/İstanbul adresinden ulaşabilirsiniz.';
+      const AUTO_REPLY = 'Bu konuda avukatlarımız ile iletişime geçmenizi öneriyorum.\nİletişim için: Telefon: +90 545 440 2501 - E-posta: info@agacsenturk.com\nVeya tüm hukuki sorunlarınıza çözüm bulmak amacıyla ofisimize Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10,\n34403 Kağıthane/İstanbul adresinden ulaşabilirsiniz.';
       const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=A%C4%9Fa%C3%A7%20%26%20%C5%9Eent%C3%BCrk%20Law%20Office%2C%20Ka%C4%9F%C4%B1thane%2F%C4%B0stanbul';
       const MAP_REPLY = 'Adresimiz: Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10, 34403 Kağıthane/İstanbul\n<a href="'+MAPS_URL+'" target="_blank" rel="noopener">Google Haritalar\'da Aç</a>';
-      const CONTACT_REPLY = 'Telefon: +90 545 440 2501\nE-posta: agacsenturk@gmail.com';
+      const CONTACT_REPLY = 'Telefon: +90 545 440 2501\nE-posta: info@agacsenturk.com';
       const HOURS_REPLY = 'Çalışma saatlerimiz: 09.00 - 18.00 saatleri arasındadır.';
       const WEEKEND_REPLY = 'Cumartesi günleri hukuki hizmet verebilmekteyiz.';
       function sendMessage(val){
@@ -632,5 +788,3 @@
     </script>
   </body>
   </html>
-
-
