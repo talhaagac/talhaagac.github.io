@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ağaç Şentürk Law Office</title>
+    <meta name="description" content="Ağaç & Şentürk Law Office — Kurumsal, güvenilir ve sonuç odaklı hukuki danışmanlık." />
+    <link rel="canonical" href="https://www.agacsenturk.com/" />
+    <meta property="og:title" content="Ağaç Şentürk Law Office" />
+    <meta property="og:description" content="Kurumsal, güvenilir ve sonuç odaklı hukuki danışmanlık." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.agacsenturk.com/" />
+    <meta property="og:image" content="assets/logo.png" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="alternate icon" href="assets/favicon.svg" />
+    <meta name="theme-color" content="#7A001F" />
+    <style>
+      :root {
+        --burgundy: #7A001F;
+        --black: #0B0B0B;
+        --metallic: #A7A9AC;
+        --light: #F3F4F6;
+        --white: #ffffff;
+        --darkblue: #000814;
+      }
+      * { box-sizing: border-box; }
+      html {
+        scroll-behavior: smooth;
+      }
+      body { 
+        margin: 0; 
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; 
+        color: var(--black);
+        background: #0b0b0b; /* iOS sabit arka plan uyumluluğu için düz renk yedek */
+        position: relative;
+        overflow-x: hidden;
+      }
+      /* iOS ve mobilde fixed arka plan uyumluluğu için ayrı katman */
+      .bg-cover { position: fixed; inset: 0; background: url('assets/ChatGPT Image 4 Eki 2025 16_59_32.png') center/cover no-repeat; z-index: -2; -webkit-transform: translateZ(0); transform: translateZ(0); }
+      /* Arka plan overlay kaldırıldı */
+      main {
+        position: relative;
+        z-index: 1;
+      }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+      header { 
+        position: sticky; 
+        top: 0; 
+        z-index: 50; 
+        background: var(--white); 
+        border-bottom: 1px solid var(--metallic);
+      }
+      header .row { height: 64px; display: flex; align-items: center; justify-content: space-between; }
+      .menu-btn { display:none; background:transparent; border:0; padding:8px; cursor:pointer; }
+      .menu-btn span { display:block; width:22px; height:2px; background:#222; margin:5px 0; transition:.2s; }
+      header nav a { text-decoration: none; color: var(--black); margin-left: 18px; font-size: 14px; font-weight: 600; }
+      header nav a.burgundy { color: var(--burgundy); }
+      header nav a.contact-btn { background: var(--black); color: var(--white); padding: 8px 16px; border-radius: 20px; }
+      header nav a.blogs-btn { background: var(--darkblue); color: var(--white); padding: 8px 16px; border-radius: 20px; margin-left: 18px; }
+      .hero { 
+        background: linear-gradient(135deg, rgba(11,11,11,.65) 0%, rgba(122,0,31,.55) 50%, rgba(11,11,11,.65) 100%); 
+        color: var(--white);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .hero .wrap { 
+        text-align: center;
+        width: 100%;
+      }
+      .btn { display: inline-block; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+      .btn-primary { background: var(--white); color: var(--black); }
+      .btn-outline { background: transparent; color: var(--white); border: 1px solid var(--white); }
+      h1, h2 { letter-spacing: .5px; }
+      section { padding: 64px 0; }
+      .grid { display: grid; gap: 16px; }
+      .grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+      .card { background: var(--white); border: 1px solid var(--metallic); border-radius: 10px; padding: 18px; }
+      .muted { color: #4B5563; }
+      .muted-2 { color: #6B7280; }
+      footer { background: var(--black); color: var(--white); }
+      .logo { height: 36px; object-fit: contain; mix-blend-mode: multiply; }
+      .footer-logo { height: 28px; object-fit: contain; mix-blend-mode: multiply; filter: grayscale(20%); }
+      /* Bölüm ayırıcı */
+      .section-sep { height:2px; background: linear-gradient(to right, rgba(0,0,0,0), rgba(122,0,31,.35), rgba(0,0,0,0)); max-width: 1100px; margin: 0 auto 24px; border-radius:2px }
+
+      /* Mobil düzenler */
+      @media (max-width: 768px) {
+        .container { padding: 0 12px; }
+        header .row { height: 56px; }
+        .menu-btn { display:inline-block; }
+        header nav { 
+          position: fixed; 
+          top: 56px; 
+          left: 0; 
+          right: 0; 
+          background: var(--white); 
+          border-bottom: 1px solid var(--metallic); 
+          display: none; 
+          flex-direction: column; 
+          padding: 12px 16px; 
+        }
+        header nav.show { display:flex; }
+        header nav a { margin: 10px 0; padding: 8px 0; }
+        header nav a.contact-btn { align-self:flex-start; border-radius: 8px; }
+
+        .hero { min-height: 78vh; }
+        .hero .wrap h1 { font-size: 28px !important; line-height: 1.25; }
+        .hero .wrap p { font-size: 14px !important; }
+        .btn { padding: 10px 16px; }
+
+        section { padding: 40px 0; }
+        .grid-3 { grid-template-columns: 1fr; }
+        #calisma-alanlari .container > div[style^="display:grid"] { grid-template-columns: 1fr !important; }
+        #iletisim .container > div[style^="display:grid"] { grid-template-columns: 1fr !important; }
+
+        footer .container > div { flex-direction: column !important; gap: 20px; }
+        footer .container > div > div { flex: 1 1 auto !important; width: 100%; }
+
+        /* Chatbot mobil düzeni */
+        .chatbot-wrap { right: 12px; bottom: 12px; }
+        .chatbot-fab { width: 48px; height: 48px; }
+        .chatbot-bubble { max-width: calc(100vw - 96px); font-size: 13px; padding: 12px; }
+        .chatbot-msgs { max-height: 160px; }
+        .chatbot-send { padding: 8px 10px; }
+
+        /* Hızlı randevu mobil düzeni */
+        #randevuForm { grid-template-columns: 1fr !important; gap: 10px !important; padding: 16px !important; }
+        #randevuForm button { width: 100%; }
+      }
+      /* Chatbot */
+      .chatbot-wrap { position: fixed; right: 20px; bottom: 20px; z-index: 9999; display: flex; align-items: flex-end; gap: 10px; }
+      .chatbot-bubble { background: var(--darkblue); color: #fff; padding: 14px 16px; border-radius: 12px 12px 12px 0; max-width: 320px; box-shadow: 0 10px 24px rgba(0,0,0,.25); font-size: 14px; line-height: 1.5; }
+      .chatbot-bubble strong { display:block; margin-bottom:6px; font-size: 13px; letter-spacing:.2px; opacity:.9 }
+      .chatbot-msgs { max-height: 220px; overflow:auto; padding-right: 4px; scrollbar-color: rgba(255,255,255,.25) transparent; }
+      .chatbot-msgs::-webkit-scrollbar { width: 8px; }
+      .chatbot-msgs::-webkit-scrollbar-track { background: rgba(255,255,255,.06); border-radius: 8px; }
+      .chatbot-msgs::-webkit-scrollbar-thumb { background: rgba(255,255,255,.25); border-radius: 8px; }
+      .chatbot-msgs::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,.35); }
+      .chatbot-msg { margin: 0 0 10px; color:#E5E7EB; white-space: pre-line; }
+      .chatbot-reply { background: rgba(255,255,255,.07); padding:8px 10px; border-radius: 8px; margin: 6px 0; }
+      .chatbot-user { background: rgba(255,255,255,.14); padding:8px 10px; border-radius: 8px; margin: 6px 0; text-align: right; color:#FFF; }
+      .chatbot-form { display:flex; gap:8px; margin-top:8px }
+      .chatbot-input { flex:1; padding:8px 10px; border-radius:8px; border:1px solid rgba(255,255,255,.15); background:rgba(0,0,0,.2); color:#fff; outline:none }
+      .chatbot-send { padding:8px 12px; border-radius:8px; border:0; background:#374151; color:#fff; cursor:pointer }
+      .chatbot-quick { display:flex; flex-wrap:wrap; gap:6px; margin:6px 0 2px }
+      .chatbot-chip { background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); color:#E5E7EB; padding:6px 10px; border-radius:999px; cursor:pointer; font-size:12px }
+      .chatbot-close { position:absolute; top:-8px; right:-8px; background:#fff; color:#111; border:0; width:20px; height:20px; border-radius:50%; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,.2) }
+      .chatbot-fab { width: 56px; height: 56px; border-radius: 50%; border: 2px solid #fff; background: #0b0b0b; display: grid; place-items:center; box-shadow: 0 8px 20px rgba(0,0,0,.35); cursor: pointer; padding:0; overflow:hidden }
+      .chatbot-fab img { width:100%; height:100%; object-fit: cover; border-radius: 50%; display:block }
+      .chatbot-initials { display:none; width:100%; height:100%; border-radius:50%; background:#111827; color:#fff; font-weight:700; font-size:12px; letter-spacing:.5px; align-items:center; justify-content:center }
+      @media (max-width:480px){ .chatbot-bubble{ max-width:220px; font-size:13px } }
+      /* Çok küçük ekranlar (<=480px) */
+      @media (max-width: 480px) {
+        .logo { height: 44px; }
+        .menu-btn span { width: 20px; }
+        section { padding: 28px 0; }
+        .hero { min-height: 70vh; }
+        .hero .wrap h1 { font-size: 24px !important; }
+        .btn { padding: 9px 14px; font-size: 14px; }
+      }
+      /* Tablet ve üstü için ufak iyileştirme */
+      @media (min-width: 1024px) {
+        #calisma-alanlari .container > div[style^="display:grid"] { grid-template-columns: repeat(3, 1fr) !important; }
+      }
+      /* Hareket azalt tercihi */
+      @media (prefers-reduced-motion: reduce) {
+        * { transition: none !important; animation: none !important; }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Ağaç & Şentürk Law Office",
+        "url": "https://www.agacsenturk.com/",
+        "logo": "https://www.agacsenturk.com/assets/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10",
+          "addressLocality": "Kağıthane",
+          "postalCode": "34403",
+          "addressCountry": "TR",
+          "addressRegion": "İstanbul"
+        },
+        "telephone": "+90 545 440 2501"
+      }
+    </script>
+  </head>
+  <body>
+    <div class="bg-cover" aria-hidden="true"></div>
+    <header>
+      <div class="container row">
+        <div style="display:flex;align-items:center;gap:12px">
+          <a href="index.html" style="display:block">
+            <img src="assets/logo.png" alt="AĞAÇ & ŞENTÜRK LAW OFFICE" style="height:50px;width:auto;object-fit:contain" />
+          </a>
+        </div>
+        <button class="menu-btn" aria-label="Menüyü aç/kapat">
+          <span></span><span></span><span></span>
+        </button>
+        <nav>
+          <a href="#hakkimizda" class="burgundy">Hakkımızda</a>
+          <a href="#calisma-alanlari">Çalışma Alanları</a>
+          <a href="avukatlar.html">Ekibimiz</a>
+          <a href="#kariyer">Kariyer</a>
+          <a href="#blogs" class="blogs-btn">Blogs</a>
+          <a href="#iletisim" class="contact-btn">İletişim</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container wrap">
+          <div style="margin-bottom:24px;display:flex;justify-content:center">
+            <svg width="80" height="80" viewBox="0 0 1000 1000" fill="currentColor" style="margin:0 auto">
+              <path d="M500 100c-20 0-36 16-36 36v50l-100 150h272l-100-150v-50c0-20-16-36-36-36zM336 386v50c0 90.75 73.25 164 164 164s164-73.25 164-164v-50H336zM300 650v100h400V650H300zM250 800v100h500V800H250zM200 950v50h600v-50H200z"/>
+            </svg>
+          </div>
+          <h1 style="font-size:42px;font-weight:800">AĞAÇ & ŞENTÜRK LAW OFFICE</h1>
+          <p class="muted" style="color:#E5E7EB;margin-top:12px">Kurumsal, güvenilir ve sonuç odaklı hukuki çözüm ortağınız</p>
+          <div style="display:flex;justify-content:center;margin-top:28px">
+            <a href="#iletisim" class="btn btn-primary">Hukuki Danışmanlık</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="hakkimizda">
+        <div class="container">
+          <h2 style="font-size:32px;font-weight:800;color:var(--white);margin-bottom:18px">Hakkımızda</h2>
+          <p style="color:var(--white);line-height:1.7">Ağaç & Şentürk Hukuk Bürosu, bireysel ve kurumsal müvekkillerine hukukun farklı disiplinlerinde etkin, çözüm odaklı ve stratejik yaklaşımlar sunmak amacıyla kurulmuştur. Özellikle ticaret hukuku, sözleşmeler hukuku, iş hukuku, ceza hukuku ve veri koruma hukuku alanlarında yoğunlaşarak her bir dosyada özgün çözümler üretmeyi hedefler.</p>
+          <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:28px">
+            <div class="card">
+              <h3 style="font-size:20px;font-weight:700;margin-bottom:8px">Misyonumuz</h3>
+              <p class="muted">Müvekkillerimize en yüksek standartlarda hukuki hizmet sunarak haklarını korumak ve adaletin tecellisine katkıda bulunmak; etik değerler ve profesyonellik temelinde güvenilir bir danışman olmak.</p>
+            </div>
+            <div class="card">
+              <h3 style="font-size:20px;font-weight:700;margin-bottom:8px">Vizyonumuz</h3>
+              <p class="muted">Yenilikçi yaklaşımlar ve teknoloji entegrasyonu ile sektörde öncü bir konuma ulaşmak; müvekkillerimize sürdürülebilir başarı sağlayan stratejiler geliştirmek.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="calisma-alanlari" style="background:linear-gradient(to bottom, #f8f9fa, #fff);padding:80px 0">
+        <div class="container">
+          <h2 style="font-size:38px;font-weight:800;color:var(--burgundy);margin-bottom:24px;text-align:center;letter-spacing:0.5px">
+            Çalışma Alanlarımız
+          </h2>
+          <p style="text-align:center;max-width:800px;margin:0 auto 48px;color:#555;font-size:18px;line-height:1.6">
+            Geniş uzmanlık alanlarımız ile bireysel ve kurumsal müvekkillerimize kapsamlı hukuki destek sunuyoruz.
+          </p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:24px;margin-top:20px">
+            <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);transition:all 0.3s ease;border:1px solid rgba(122,0,31,0.1);position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--burgundy)"></div>
+              <h3 style="color:var(--burgundy);font-size:22px;margin:0 0 16px;font-weight:700">Ticaret Hukuku</h3>
+              <p style="color:#666;line-height:1.7;margin:0">Şirket kuruluşu, birleşme-devralma, ticari sözleşmeler, rekabet ve uyuşmazlıklar.</p>
+            </div>
+            <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);transition:all 0.3s ease;border:1px solid rgba(122,0,31,0.1);position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--burgundy)"></div>
+              <h3 style="color:var(--burgundy);font-size:22px;margin:0 0 16px;font-weight:700">Sözleşmeler Hukuku</h3>
+              <p style="color:#666;line-height:1.7;margin:0">Sözleşme hazırlama, inceleme, müzakere ve uyuşmazlık çözümü.</p>
+            </div>
+            <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);transition:all 0.3s ease;border:1px solid rgba(122,0,31,0.1);position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--burgundy)"></div>
+              <h3 style="color:var(--burgundy);font-size:22px;margin:0 0 16px;font-weight:700">İş Hukuku</h3>
+              <p style="color:#666;line-height:1.7;margin:0">İşçi-işveren ilişkileri, sözleşmeler, tazminat ve danışmanlık.</p>
+            </div>
+            <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);transition:all 0.3s ease;border:1px solid rgba(122,0,31,0.1);position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--burgundy)"></div>
+              <h3 style="color:var(--burgundy);font-size:22px;margin:0 0 16px;font-weight:700">Ceza Hukuku</h3>
+              <p style="color:#666;line-height:1.7;margin:0">Soruşturma ve kovuşturma süreçlerinde savunma ve temsil.</p>
+            </div>
+            <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);transition:all 0.3s ease;border:1px solid rgba(122,0,31,0.1);position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--burgundy)"></div>
+              <h3 style="color:var(--burgundy);font-size:22px;margin:0 0 16px;font-weight:700">Veri Koruma Hukuku</h3>
+              <p style="color:#666;line-height:1.7;margin:0">KVKK, GDPR uyumu, bilgi güvenliği ve gizlilik danışmanlığı.</p>
+            </div>
+            <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);transition:all 0.3s ease;border:1px solid rgba(122,0,31,0.1);position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--burgundy)"></div>
+              <h3 style="color:var(--burgundy);font-size:22px;margin:0 0 16px;font-weight:700">İcra ve İflas Hukuku</h3>
+              <p style="color:#666;line-height:1.7;margin:0">Alacak takibi, iflas süreçleri ve konkordato işlemleri.</p>
+            </div>
+            <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);transition:all 0.3s ease;border:1px solid rgba(122,0,31,0.1);position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--burgundy)"></div>
+              <h3 style="color:var(--burgundy);font-size:22px;margin:0 0 16px;font-weight:700">Gayrimenkul Hukuku</h3>
+              <p style="color:#666;line-height:1.7;margin:0">Tapu, ipotek, kira, tahliye, ortaklığın giderilmesi ve imar uyuşmazlıkları.</p>
+            </div>
+            <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);transition:all 0.3s ease;border:1px solid rgba(122,0,31,0.1);position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--burgundy)"></div>
+              <h3 style="color:var(--burgundy);font-size:22px;margin:0 0 16px;font-weight:700">Miras Hukuku</h3>
+              <p style="color:#666;line-height:1.7;margin:0">Vasiyetname, mirasın paylaşımı, tenkis, mirasın reddi ve tereke işlemleri.</p>
+            </div>
+            <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);transition:all 0.3s ease;border:1px solid rgba(122,0,31,0.1);position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--burgundy)"></div>
+              <h3 style="color:var(--burgundy);font-size:22px;margin:0 0 16px;font-weight:700">Aile Hukuku</h3>
+              <p style="color:#666;line-height:1.7;margin:0">Boşanma, velayet, nafaka, mal rejimi ve kişisel ilişki düzenlenmesi.</p>
+            </div>
+            <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);transition:all 0.3s ease;border:1px solid rgba(122,0,31,0.1);position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--burgundy)"></div>
+              <h3 style="color:var(--burgundy);font-size:22px;margin:0 0 16px;font-weight:700">Tüketici Hukuku</h3>
+              <p style="color:#666;line-height:1.7;margin:0">Ayıplı mal ve hizmetler, iade/değişim, tüketici hakem heyeti ve mahkeme süreçleri.</p>
+            </div>
+            <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);transition:all 0.3s ease;border:1px solid rgba(122,0,31,0.1);position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--burgundy)"></div>
+              <h3 style="color:var(--burgundy);font-size:22px;margin:0 0 16px;font-weight:700">Fikri ve Sınai Haklar</h3>
+              <p style="color:#666;line-height:1.7;margin:0">Marka, patent, tasarım, telif hakları ve lisans sözleşmeleri.</p>
+            </div>
+            <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);transition:all 0.3s ease;border:1px solid rgba(122,0,31,0.1);position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:var(--burgundy)"></div>
+              <h3 style="color:var(--burgundy);font-size:22px;margin:0 0 16px;font-weight:700">Vergi Hukuku</h3>
+              <p style="color:#666;line-height:1.7;margin:0">Vergi uyuşmazlıkları, cezalar, uzlaşma ve vergi yargısı süreçleri.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="blogs" style="background:var(--darkblue);color:var(--white);padding:80px 0; overflow:hidden">
+        <div class="container">
+          <h2 style="font-size:38px;font-weight:800;color:#fff;margin-bottom:24px;text-align:center;letter-spacing:0.5px">Blogs</h2>
+          <p style="text-align:center;max-width:800px;margin:0 auto 40px;color:#E5E7EB;font-size:16px;line-height:1.6">Güncel hukuki gelişmeler, içgörüler ve bültenler.</p>
+          <div class="blogs-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:20px">
+            <article class="blog-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:20px;min-width:0">
+              <h3 style="margin:0 0 10px;font-size:20px;color:#fff">Ticaret Hukukunda Güncel Değişiklikler</h3>
+              <p style="margin:0 0 14px;color:#D1D5DB;line-height:1.7">Şirket birleşmeleri ve sözleşme yönetiminde son düzenlemelerin kısa özeti.</p>
+              <a href="#" style="color:#BBD0FF;text-decoration:none">Devamını oku</a>
+            </article>
+            <article class="blog-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:20px;min-width:0">
+              <h3 style="margin:0 0 10px;font-size:20px;color:#fff">KVKK ve GDPR Uyum Rehberi</h3>
+              <p style="margin:0 0 14px;color:#D1D5DB;line-height:1.7">Veri işleme süreçlerinde dikkat edilmesi gereken başlıklar.</p>
+              <a href="#" style="color:#BBD0FF;text-decoration:none">Devamını oku</a>
+            </article>
+            <article class="blog-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:20px;min-width:0">
+              <h3 style="margin:0 0 10px;font-size:20px;color:#fff">İş Hukukunda Yargı İçtihatları</h3>
+              <p style="margin:0 0 14px;color:#D1D5DB;line-height:1.7">Son dönemde öne çıkan kararların kısa analizi.</p>
+              <a href="#" style="color:#BBD0FF;text-decoration:none">Devamını oku</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="kariyer" style="background:linear-gradient(135deg, rgba(11,11,11,.8) 0%, rgba(122,0,31,.7) 60%, rgba(11,11,11,.8) 100%);color:var(--white);position:relative">
+        <div class="container">
+          <h2 style="font-size:32px;font-weight:800;color:var(--white);margin-bottom:18px">Kariyer</h2>
+          <p style="color:var(--white);line-height:1.7">Analitik düşünen, araştırmaya meraklı, iletişimi güçlü ekip arkadaşlarıyla çalışmaktan memnuniyet duyuyoruz. CV ve niyet mektubunuzu <a href="mailto:info@agacsenturk.com" style="color:var(--white);font-weight:600;text-decoration:underline">info@agacsenturk.com</a> adresine iletebilirsiniz.</p>
+        </div>
+      </section>
+
+      <section id="iletisim" style="padding:80px 0;background:linear-gradient(to bottom, #fff, #f8f9fa)">
+        <div class="container">
+          <h2 style="font-size:38px;font-weight:800;color:var(--burgundy);margin-bottom:24px;text-align:center;letter-spacing:0.5px">
+            İletişim
+          </h2>
+          <p style="text-align:center;max-width:800px;margin:0 auto 48px;color:#555;font-size:18px;line-height:1.6">
+            Size en iyi hukuki danışmanlığı sunmak için buradayız.
+          </p>
+          
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:40px">
+            <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);height:fit-content">
+              <div style="margin-bottom:24px">
+                <h3 style="font-size:22px;font-weight:700;color:var(--burgundy);margin-bottom:16px;display:flex;align-items:center;gap:8px">
+                  <svg style="width:24px;height:24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Adres
+                </h3>
+                <p style="color:#666;line-height:1.7;margin-bottom:16px">
+                  Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10,<br/>
+                  34403 Kağıthane/İstanbul
+                </p>
+                <a href="https://www.google.com/maps/search/?api=1&query=A%C4%9Fa%C3%A7%20%26%20%C5%9Eent%C3%BCrk%20Law%20Office%2C%20Ka%C4%9F%C4%B1thane%2F%C4%B0stanbul" 
+                   target="_blank" 
+                   style="display:inline-block;padding:10px 20px;background:var(--burgundy);color:white;text-decoration:none;border-radius:6px;font-weight:500;transition:all 0.3s ease">
+                  Yol Tarifi Al
+                </a>
+              </div>
+              
+              <div style="margin-bottom:24px">
+                <h3 style="font-size:22px;font-weight:700;color:var(--burgundy);margin-bottom:16px;display:flex;align-items:center;gap:8px">
+                  <svg style="width:24px;height:24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  Telefon
+                </h3>
+                <a href="tel:+905454402501" style="color:var(--burgundy);text-decoration:none;font-size:18px;font-weight:500">
+                  +90 545 440 2501
+                </a>
+              </div>
+              
+              <div>
+                <h3 style="font-size:22px;font-weight:700;color:var(--burgundy);margin-bottom:16px;display:flex;align-items:center;gap:8px">
+                  <svg style="width:24px;height:24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  E-posta
+                </h3>
+                <a href="mailto:info@agacsenturk.com" style="color:var(--burgundy);text-decoration:none;font-size:18px;font-weight:500">
+                  info@agacsenturk.com
+                </a>
+              </div>
+            </div>
+            
+            <div style="border-radius:12px;overflow:hidden;height:400px;box-shadow:0 4px 20px rgba(0,0,0,0.05)">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.5750478496386!2d28.974843!3d41.069821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab71f13ca6e2f%3A0x84e6d1aa816b5237!2zSMO8cnJpeWV0LCBEci4gQ2VtaWwgQmVuZ8O8IENkLiBObzozNCwgMzQ0MDMgS2HEn8SxdGhhbmUvxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1710101234567!5m2!1str!2str"
+                width="100%" 
+                height="100%" 
+                style="border:0" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hızlı Randevu - İletişimin hemen altında -->
+      <section id="hizli-randevu" style="padding:60px 0;background:linear-gradient(to bottom, #f8f9fa, #fff)">
+        <div class="container">
+          <div class="section-sep" aria-hidden="true"></div>
+          <h2 style="font-size:32px;font-weight:800;color:var(--burgundy);margin-bottom:18px;text-align:center">Hızlı Randevu</h2>
+          <p style="text-align:center;max-width:720px;margin:0 auto 28px;color:#666">Aşağıdaki formu doldurun; talebiniz <strong>agacsenturk@gmail.com</strong> adresimize iletilecek ve en kısa sürede sizi arayacağız.</p>
+          <form id="randevuForm" style="max-width:760px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:14px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:20px;box-shadow:0 6px 20px rgba(0,0,0,.05)">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <label for="ad" style="font-weight:600;color:#333">Ad</label>
+              <input id="ad" name="Ad" type="text" required placeholder="Adınız" style="padding:10px;border:1px solid #e5e7eb;border-radius:8px" />
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <label for="soyad" style="font-weight:600;color:#333">Soyad</label>
+              <input id="soyad" name="Soyad" type="text" required placeholder="Soyadınız" style="padding:10px;border:1px solid #e5e7eb;border-radius:8px" />
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <label for="telefon" style="font-weight:600;color:#333">Telefon</label>
+              <input id="telefon" name="Telefon" type="tel" required placeholder="05xx xxx xx xx" style="padding:10px;border:1px solid #e5e7eb;border-radius:8px" />
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <label for="tarih" style="font-weight:600;color:#333">Tercih Edilen Tarih</label>
+              <input id="tarih" name="Tarih" type="date" required style="padding:10px;border:1px solid #e5e7eb;border-radius:8px" />
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <label for="saat" style="font-weight:600;color:#333">Tercih Edilen Saat</label>
+              <input id="saat" name="Saat" type="time" required style="padding:10px;border:1px solid #e5e7eb;border-radius:8px" />
+            </div>
+            <div style="display:flex;align-items:flex-end;gap:6px">
+              <button id="randevuGonder" type="submit" class="btn" style="background:var(--burgundy);color:#fff;border:none;padding:12px 18px;border-radius:8px;font-weight:700">Gönder</button>
+            </div>
+            <p id="randevuSonuc" style="grid-column:1/-1;margin:6px 0 0;color:#166534;display:none">Talebiniz alınmıştır, en kısa sürede sizinle iletişime geçeceğiz.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer style="background:linear-gradient(135deg, rgba(11,11,11,.65) 0%, rgba(122,0,31,.55) 50%, rgba(11,11,11,.65) 100%);padding:40px 0;color:var(--white);position:relative;border-top:1px solid rgba(255,255,255,0.1)">
+      <div class="container">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:40px">
+            <div style="background:white;padding:30px 40px;border-radius:30px;box-shadow:0 4px 15px rgba(0,0,0,0.1);flex:0 0 400px">
+              <img src="assets/logo.png" alt="AĞAÇ & ŞENTÜRK LAW OFFICE" style="width:100%;height:auto;display:block;margin-bottom:15px" />
+              <p style="color:#333;margin:0;text-align:center;font-size:14px;line-height:1.6">
+                Kurumsal, güvenilir ve sonuç odaklı hukuki çözüm ortağınız.
+              </p>
+            </div>
+            <div style="flex:0 0 300px">
+              <h3 style="font-size:18px;color:var(--white);margin-bottom:16px;font-weight:600">İletişim</h3>
+              <p style="color:var(--white);line-height:1.6;margin:12px 0;opacity:0.9">
+                Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10<br/>
+                34403 Kağıthane/İstanbul
+              </p>
+              <p style="margin:12px 0">
+                <a href="tel:+905454402501" style="color:var(--white);text-decoration:none;opacity:0.9">+90 545 440 2501</a><br/>
+                <a href="mailto:info@agacsenturk.com" style="color:var(--white);text-decoration:none;opacity:0.9">info@agacsenturk.com</a>
+              </p>
+            </div>
+            <div style="flex:0 0 300px">
+              <h3 style="font-size:18px;color:var(--white);margin-bottom:16px;font-weight:600">Yasal Metinlerimiz</h3>
+              <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px">
+                <a href="#" style="color:var(--white);text-decoration:none;opacity:0.9;font-size:14px">KVK Aydınlatma Metni</a>
+                <a href="#" style="color:var(--white);text-decoration:none;opacity:0.9;font-size:14px">Çerez Politikası</a>
+              </div>
+              <h3 style="font-size:18px;color:var(--white);margin-bottom:16px;font-weight:600">Sosyal Medya</h3>
+              <div style="display:flex;gap:12px">
+                <a href="#" target="_blank" rel="noopener" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;transition:all 0.3s ease">in</a>
+                <a href="#" target="_blank" rel="noopener" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;transition:all 0.3s ease">X</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1)">
+          <p style="color:var(--white);opacity:0.85;margin:0 0 6px">© <span id="y"></span> Ağaç & Şentürk Law Office. Tüm hakları saklıdır.</p>
+          <p style="color:var(--white);opacity:0.6;font-size:14px;margin:0">Bu websitesi NG Technology tarafından hazırlanmıştır.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Chatbot - NG -->
+    <div class="chatbot-wrap" id="ng-wrap" style="display:flex">
+      <div class="chatbot-bubble" id="ng-bubble">
+        <button class="chatbot-close" aria-label="Kapat" onclick="document.getElementById('ng-bubble').style.display='none'">×</button>
+        <strong>Av. NG</strong>
+        <div class="chatbot-msgs" id="ng-msgs">
+          <p class="chatbot-msg chatbot-reply">Merhaba! Ben Av. NG, size destek olmak amacıyla görevli bir asistanım. Size nasıl yardımcı olabilirim?</p>
+        </div>
+        <div class="chatbot-quick" id="ng-quick">
+          <button type="button" class="chatbot-chip" data-msg="Randevu almak istiyorum">Randevu</button>
+          <button type="button" class="chatbot-chip" data-msg="Telefon ve e-posta bilginiz nedir?">İletişim</button>
+          <button type="button" class="chatbot-chip" data-msg="Adresinizi paylaşır mısınız?">Adres</button>
+        </div>
+        <form class="chatbot-form" id="ng-form">
+          <input class="chatbot-input" id="ng-input" type="text" placeholder="Mesajınızı yazın..." autocomplete="off" />
+          <button class="chatbot-send" type="submit">Gönder</button>
+        </form>
+      </div>
+      <button class="chatbot-fab" id="ng-fab" aria-label="Sohbeti aç/kapat">
+        <img src="assets/ASG.png" alt="Av. NG" onerror="this.style.display='none'; this.previousElementSibling && (this.previousElementSibling.style.display='flex')">
+        <span class="chatbot-initials">NG</span>
+      </button>
+    </div>
+
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+      
+      // Header scroll effect
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Mobile menu toggle
+      const menuBtn = document.querySelector('.menu-btn');
+      const nav = document.querySelector('header nav');
+      menuBtn.addEventListener('click', () => {
+        nav.classList.toggle('show');
+      });
+
+      // Chatbot toggle
+      const bubble = document.getElementById('ng-bubble');
+      const fab = document.getElementById('ng-fab');
+      fab.addEventListener('click', ()=>{
+        bubble.style.display = (bubble.style.display === 'none') ? 'block' : 'none';
+      });
+
+      // Simple auto-reply form
+      const form = document.getElementById('ng-form');
+      const input = document.getElementById('ng-input');
+      const msgs = document.getElementById('ng-msgs');
+      const AUTO_REPLY = 'Bu konuda avukatlarımız ile iletişime geçmenizi öneriyorum.\nİletişim için: Telefon: +90 545 440 2501 - E-posta: info@agacsenturk.com\nVeya tüm hukuki sorunlarınıza çözüm bulmak amacıyla ofisimize Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10,\n34403 Kağıthane/İstanbul adresinden ulaşabilirsiniz.';
+      const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=A%C4%9Fa%C3%A7%20%26%20%C5%9Eent%C3%BCrk%20Law%20Office%2C%20Ka%C4%9F%C4%B1thane%2F%C4%B0stanbul';
+      const MAP_REPLY = 'Adresimiz: Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10, 34403 Kağıthane/İstanbul\n<a href="'+MAPS_URL+'" target="_blank" rel="noopener">Google Haritalar\'da Aç</a>';
+      const CONTACT_REPLY = 'Telefon: +90 545 440 2501\nE-posta: info@agacsenturk.com';
+      const HOURS_REPLY = 'Çalışma saatlerimiz: 09.00 - 18.00 saatleri arasındadır.';
+      const WEEKEND_REPLY = 'Cumartesi günleri hukuki hizmet verebilmekteyiz.';
+      function sendMessage(val){
+        if(!val) return;
+        const user = document.createElement('p');
+        user.className = 'chatbot-msg chatbot-user';
+        user.textContent = val;
+        msgs.appendChild(user);
+        // Otomatik yanıt
+        const reply = document.createElement('p');
+        reply.className = 'chatbot-msg chatbot-reply';
+        if(/hafta sonu|haftasonu|pazar|cumartesi aç|cumartesi açık/i.test(val)) {
+          reply.textContent = WEEKEND_REPLY;
+        } else if(/çalışma saat|mesai/i.test(val)) {
+          reply.textContent = HOURS_REPLY;
+        } else if(/iletişim|randevu/i.test(val)) {
+          reply.textContent = CONTACT_REPLY;
+        } else if(/adres/i.test(val)) {
+          reply.innerHTML = MAP_REPLY;
+        } else {
+          reply.innerHTML = AUTO_REPLY;
+        }
+        msgs.appendChild(reply);
+        msgs.scrollTop = msgs.scrollHeight;
+      }
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const val = input.value.trim();
+        input.value='';
+        sendMessage(val);
+      });
+      document.querySelectorAll('#ng-quick .chatbot-chip').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          sendMessage(this.getAttribute('data-msg'));
+        });
+      });
+
+      // İletişim butonuna basınca sohbet balonunda iletişim bilgilerini göster
+      function showContactReply(){
+        bubble.style.display = 'block';
+        const reply = document.createElement('p');
+        reply.className = 'chatbot-msg chatbot-reply';
+        reply.textContent = CONTACT_REPLY;
+        msgs.appendChild(reply);
+        msgs.scrollTop = msgs.scrollHeight;
+      }
+      document.querySelectorAll('.contact-btn').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          showContactReply();
+        });
+      });
+
+      // Hızlı Randevu formu — e-posta ile gönderim (mailto)
+      const rForm = document.getElementById('randevuForm');
+      if (rForm) {
+        rForm.addEventListener('submit', function(e){
+          e.preventDefault();
+          const ad = document.getElementById('ad').value.trim();
+          const soyad = document.getElementById('soyad').value.trim();
+          const tel = document.getElementById('telefon').value.trim();
+          const tarih = document.getElementById('tarih').value;
+          const saat = document.getElementById('saat').value;
+          const konu = encodeURIComponent('Hızlı Randevu Talebi');
+          const icerik = encodeURIComponent(
+            `Ad: ${ad}\nSoyad: ${soyad}\nTelefon: ${tel}\nTercih edilen tarih: ${tarih}\nTercih edilen saat: ${saat}`
+          );
+          // Kullanıcının mail istemcisini açarak e-posta oluşturur
+          window.location.href = `mailto:agacsenturk@gmail.com?subject=${konu}&body=${icerik}`;
+          const sonuc = document.getElementById('randevuSonuc');
+          if (sonuc) { sonuc.style.display = 'block'; }
+        });
+      }
+    </script>
+  </body>
+  </html>
+
+
