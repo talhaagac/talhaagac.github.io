@@ -15,7 +15,6 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="alternate icon" href="assets/favicon.svg" />
     <meta name="theme-color" content="#7A001F" />
-    <link rel="stylesheet" href="assets/editorial.css" />
     <style>
       :root {
         --burgundy: #7A001F;
@@ -199,8 +198,6 @@
         header nav a.contact-btn { align-self:flex-start; border-radius: 8px; }
 
         .hero { min-height: 78vh; }
-        .hero .wrap h1 { font-size: 28px !important; line-height: 1.25; }
-        .hero .wrap p { font-size: 14px !important; }
         .btn { padding: 10px 16px; }
 
         section { padding: 40px 0; }
@@ -259,7 +256,6 @@
         .menu-btn span { width: 20px; }
         section { padding: 28px 0; }
         .hero { min-height: 70vh; }
-        .hero .wrap h1 { font-size: 24px !important; }
         .btn { padding: 9px 14px; font-size: 14px; }
         .urban-lead h2 { font-size: 32px; }
         .urban-lead p { font-size: 15px; }
@@ -274,6 +270,7 @@
         * { transition: none !important; animation: none !important; }
       }
     </style>
+    <link rel="stylesheet" href="assets/editorial.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -296,27 +293,29 @@
   </head>
   <body>
     <div class="bg-cover" aria-hidden="true"></div>
-    <header>
+    <a class="skip-link" href="#main-content">İçeriğe geç</a>
+    <header class="site-header">
       <div class="container row">
         <a class="editorial-brand" href="index.html" aria-label="Ağaç ve Şentürk ana sayfa">
           <strong>Ağaç &amp; Şentürk</strong>
           <span>Hukuk Bürosu</span>
         </a>
-        <button class="menu-btn" aria-label="Menüyü aç/kapat">
-          <span></span><span></span><span></span>
+        <button class="menu-btn" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="site-nav">
+          <span aria-hidden="true">☰</span>
         </button>
-        <nav>
-          <a href="#hakkimizda" class="burgundy">Hakkımızda</a>
-          <a href="#calisma-alanlari">Çalışma Alanları</a>
-          <a href="#kentsel-donusum">Kentsel Dönüşüm</a>
+        <nav id="site-nav" aria-label="Ana menü">
+          <a href="index.html" aria-current="page">Ana Sayfa</a>
+          <a href="index.html#hakkimizda">Hakkımızda</a>
+          <a href="index.html#calisma-alanlari">Çalışma Alanları</a>
+          <a href="index.html#kentsel-donusum">Kentsel Dönüşüm</a>
           <a href="avukatlar.html">Ekibimiz</a>
-          <a href="#kariyer">Kariyer</a>
-          <a href="#iletisim" class="contact-btn">İletişim</a>
+          <a href="index.html#kariyer">Kariyer</a>
+          <a href="iletisim.html" class="contact-btn">İletişim</a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero">
         <div class="container wrap editorial-hero">
           <div class="hero-copy">
@@ -326,7 +325,7 @@
             <a href="#iletisim" class="btn btn-primary">İletişime geçin →</a>
           </div>
           <figure class="hero-media">
-            <img src="assets/site-background.webp" alt="İstanbul'da klasik mimari detay" width="1536" height="1024" />
+            <img src="assets/site-background.webp" alt="Gece İstanbul silüeti ve Boğaz Köprüsü" width="1536" height="1024" />
             <figcaption>İstanbul • Türkiye — Bireysel ve kurumsal hukuki danışmanlık</figcaption>
           </figure>
         </div>
@@ -507,7 +506,7 @@
                   34403 Kağıthane/İstanbul
                 </p>
                 <a href="https://www.google.com/maps/search/?api=1&query=A%C4%9Fa%C3%A7%20%26%20%C5%9Eent%C3%BCrk%20Law%20Office%2C%20Ka%C4%9F%C4%B1thane%2F%C4%B0stanbul" 
-                   target="_blank" 
+                   target="_blank" rel="noopener" class="directions-link"
                    style="display:inline-block;padding:10px 20px;background:var(--burgundy);color:white;text-decoration:none;border-radius:6px;font-weight:500;transition:all 0.3s ease">
                   Yol Tarifi Al
                 </a>
@@ -583,7 +582,7 @@
               <input id="saat" name="Saat" type="time" required style="padding:10px;border:1px solid #e5e7eb;border-radius:8px" />
             </div>
             <div style="display:flex;align-items:flex-end;gap:6px">
-              <button id="randevuGonder" type="submit" class="btn" style="background:var(--burgundy);color:#fff;border:none;padding:12px 18px;border-radius:8px;font-weight:700">Gönder</button>
+              <button id="randevuGonder" type="submit" class="button-solid">Gönder</button>
             </div>
             <label style="grid-column:1/-1;display:flex;gap:8px;align-items:flex-start;font-size:14px;color:#4b5563"><input type="checkbox" required style="margin-top:3px" /> <span><a href="kvkk-aydinlatma-metni.html" style="color:var(--burgundy)">KVKK Aydınlatma Metni</a>'ni okudum.</span></label>
             <p id="randevuSonuc" style="grid-column:1/-1;margin:6px 0 0;color:#166534;display:none">E-posta uygulamanız açıldı. Talebinizin ulaşması için e-postayı göndermeniz gerekir.</p>
@@ -592,38 +591,30 @@
       </section>
     </main>
 
-    <footer style="background:linear-gradient(135deg, rgba(11,11,11,.65) 0%, rgba(122,0,31,.55) 50%, rgba(11,11,11,.65) 100%);padding:40px 0;color:var(--white);position:relative;border-top:1px solid rgba(255,255,255,0.1)">
+    <footer class="site-footer">
       <div class="container">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:40px">
-            <div style="background:white;padding:30px 40px;border-radius:30px;box-shadow:0 4px 15px rgba(0,0,0,0.1);flex:0 0 400px">
-              <img src="assets/logo.png" alt="AĞAÇ & ŞENTÜRK LAW OFFICE" style="width:100%;height:auto;display:block;margin-bottom:15px" />
-              <p style="color:#333;margin:0;text-align:center;font-size:14px;line-height:1.6">
-                Hukuki danışmanlık ve avukatlık hizmetleri.
-              </p>
-            </div>
-            <div style="flex:0 0 300px">
-              <h3 style="font-size:18px;color:var(--white);margin-bottom:16px;font-weight:600">İletişim</h3>
-              <p style="color:var(--white);line-height:1.6;margin:12px 0;opacity:0.9">
-                Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10<br/>
-                34403 Kağıthane/İstanbul
-              </p>
-              <p style="margin:12px 0">
-                <a href="tel:+905454402501" style="color:var(--white);text-decoration:none;opacity:0.9">+90 545 440 2501</a><br/>
-                <a href="mailto:agacsenturk@gmail.com" style="color:var(--white);text-decoration:none;opacity:0.9">agacsenturk@gmail.com</a>
-              </p>
-            </div>
-            <div style="flex:0 0 300px">
-              <h3 style="font-size:18px;color:var(--white);margin-bottom:16px;font-weight:600">Yasal Metinlerimiz</h3>
-              <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px">
-                <a href="kvkk-aydinlatma-metni.html" style="color:var(--white);text-decoration:none;opacity:0.9;font-size:14px">KVKK Aydınlatma Metni</a>
-                <a href="cerez-politikasi.html" style="color:var(--white);text-decoration:none;opacity:0.9;font-size:14px">Çerez Politikası</a>
-              </div>
-            </div>
+        <div class="footer-grid">
+          <div class="footer-identity">
+            <a class="footer-brand" href="index.html">Ağaç &amp; Şentürk</a>
+            <p class="footer-kicker">Hukuk Bürosu · İstanbul</p>
+            <p>Hukuki danışmanlık ve avukatlık hizmetleri.</p>
+          </div>
+          <div>
+            <h2>İletişim</h2>
+            <p>Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10<br />34403 Kağıthane/İstanbul</p>
+            <p><a href="tel:+905454402501">+90 545 440 2501</a><br /><a href="mailto:agacsenturk@gmail.com">agacsenturk@gmail.com</a></p>
+          </div>
+          <div>
+            <h2>Yasal Metinler</h2>
+            <ul class="footer-links">
+              <li><a href="kvkk-aydinlatma-metni.html">KVKK Aydınlatma Metni</a></li>
+              <li><a href="cerez-politikasi.html">Çerez Politikası</a></li>
+            </ul>
           </div>
         </div>
-        <div style="text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1)">
-          <p style="color:var(--white);opacity:0.85;margin:0 0 6px">© <span id="y"></span> Ağaç & Şentürk Law Office. Tüm hakları saklıdır.</p>
-          <p style="color:var(--white);opacity:0.6;font-size:14px;margin:0">Bu websitesi Avukat Talha AĞAÇ tarafından hazırlanmıştır.</p>
+        <div class="footer-bottom">
+          <p>© <span id="y"></span> Ağaç &amp; Şentürk Law Office. Tüm hakları saklıdır.</p>
+          <p>Bu websitesi Avukat Talha AĞAÇ tarafından hazırlanmıştır.</p>
         </div>
       </div>
     </footer>
@@ -668,8 +659,22 @@
       // Mobile menu toggle
       const menuBtn = document.querySelector('.menu-btn');
       const nav = document.querySelector('header nav');
+      function closeMenu() {
+        nav.classList.remove('show');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Menüyü aç');
+      }
       menuBtn.addEventListener('click', () => {
-        nav.classList.toggle('show');
+        const open = nav.classList.toggle('show');
+        menuBtn.setAttribute('aria-expanded', String(open));
+        menuBtn.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+      });
+      nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && nav.classList.contains('show')) {
+          closeMenu();
+          menuBtn.focus();
+        }
       });
 
       // Chatbot toggle

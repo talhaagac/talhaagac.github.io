@@ -12,7 +12,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://agacsenturk.com/iletisim" />
     <meta property="og:image" content="https://agacsenturk.com/assets/logo.png" />
-    <link rel="stylesheet" href="assets/editorial.css" />
     <style>
       :root { --burgundy:#7A001F; --black:#0B0B0B; --metallic:#A7A9AC; --light:#F3F4F6; --white:#fff; }
       body { 
@@ -71,26 +70,32 @@
         .chatbot-bubble { max-width:calc(100vw - 110px); }
       }
     </style>
+    <link rel="stylesheet" href="assets/editorial.css" />
   </head>
   <body>
-    <header>
+    <a class="skip-link" href="#main-content">İçeriğe geç</a>
+    <header class="site-header">
       <div class="container row">
         <a class="editorial-brand" href="index.html" aria-label="Ağaç ve Şentürk ana sayfa">
           <strong>Ağaç &amp; Şentürk</strong>
           <span>Hukuk Bürosu</span>
         </a>
-        <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="site-nav">☰</button>
-        <nav id="site-nav">
-          <a href="index.html#hakkimizda" class="burgundy">Hakkımızda</a>
+        <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="site-nav">
+          <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="site-nav" aria-label="Ana menü">
+          <a href="index.html">Ana Sayfa</a>
+          <a href="index.html#hakkimizda">Hakkımızda</a>
           <a href="index.html#calisma-alanlari">Çalışma Alanları</a>
+          <a href="index.html#kentsel-donusum">Kentsel Dönüşüm</a>
           <a href="avukatlar.html">Ekibimiz</a>
           <a href="index.html#kariyer">Kariyer</a>
-          <a href="iletisim.html" class="contact-btn">İletişim</a>
+          <a href="iletisim.html" class="contact-btn" aria-current="page">İletişim</a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section>
         <div class="container">
           <h1 style="font-size:32px;font-weight:800;color:var(--burgundy);margin-bottom:18px;text-align:center">İletişim</h1>
@@ -126,34 +131,30 @@
       </section>
     </main>
 
-    <footer style="background:var(--white);border-top:1px solid var(--metallic);padding:40px 0;color:var(--black)">
+    <footer class="site-footer">
       <div class="container">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px;margin-bottom:40px">
-          <div>
-            <img src="assets/logo.png" alt="AĞAÇ & ŞENTÜRK LAW OFFICE" style="height:60px;width:auto;margin-bottom:16px" />
-            <p style="color:#666;line-height:1.6;margin:12px 0">
-              Hukuki danışmanlık ve avukatlık hizmetleri.
-            </p>
+        <div class="footer-grid">
+          <div class="footer-identity">
+            <a class="footer-brand" href="index.html">Ağaç &amp; Şentürk</a>
+            <p class="footer-kicker">Hukuk Bürosu · İstanbul</p>
+            <p>Hukuki danışmanlık ve avukatlık hizmetleri.</p>
           </div>
           <div>
-            <h3 style="font-size:18px;color:var(--burgundy);margin-bottom:16px">İletişim</h3>
-            <p style="color:#666;line-height:1.6;margin:12px 0">
-              Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10<br/>
-              34403 Kağıthane/İstanbul
-            </p>
-            <p style="margin:12px 0">
-              <a href="tel:+905454402501" style="color:var(--burgundy);text-decoration:none">+90 545 440 2501</a><br/>
-              <a href="mailto:agacsenturk@gmail.com" style="color:var(--burgundy);text-decoration:none">agacsenturk@gmail.com</a>
-            </p>
+            <h2>İletişim</h2>
+            <p>Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10<br />34403 Kağıthane/İstanbul</p>
+            <p><a href="tel:+905454402501">+90 545 440 2501</a><br /><a href="mailto:agacsenturk@gmail.com">agacsenturk@gmail.com</a></p>
           </div>
           <div>
-            <h3 style="font-size:18px;color:var(--burgundy);margin-bottom:16px">Yasal Metinler</h3>
-            <p><a href="kvkk-aydinlatma-metni.html" style="color:var(--burgundy)">KVKK Aydınlatma Metni</a><br><a href="cerez-politikasi.html" style="color:var(--burgundy)">Çerez Politikası</a></p>
+            <h2>Yasal Metinler</h2>
+            <ul class="footer-links">
+              <li><a href="kvkk-aydinlatma-metni.html">KVKK Aydınlatma Metni</a></li>
+              <li><a href="cerez-politikasi.html">Çerez Politikası</a></li>
+            </ul>
           </div>
         </div>
-        <div style="text-align:center;padding-top:20px;border-top:1px solid var(--metallic)">
-          <p style="color:#666;margin:0 0 6px">© <span id="y"></span> Ağaç & Şentürk Law Office. Tüm hakları saklıdır.</p>
-          <p style="color:#666;opacity:0.8;font-size:14px;margin:0">Bu websitesi Avukat Talha AĞAÇ tarafından hazırlanmıştır.</p>
+        <div class="footer-bottom">
+          <p>© <span id="y"></span> Ağaç &amp; Şentürk Law Office. Tüm hakları saklıdır.</p>
+          <p>Bu websitesi Avukat Talha AĞAÇ tarafından hazırlanmıştır.</p>
         </div>
       </div>
     </footer>
@@ -228,8 +229,20 @@
       menuButton.addEventListener('click', function(){
         const open = siteNav.classList.toggle('open');
         menuButton.setAttribute('aria-expanded', String(open));
+        menuButton.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
       });
-      siteNav.querySelectorAll('a').forEach(function(link){ link.addEventListener('click', function(){ siteNav.classList.remove('open'); menuButton.setAttribute('aria-expanded','false'); }); });
+      function closeMenu() {
+        siteNav.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Menüyü aç');
+      }
+      siteNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && siteNav.classList.contains('open')) {
+          closeMenu();
+          menuButton.focus();
+        }
+      });
     </script>
   </body>
 </html>

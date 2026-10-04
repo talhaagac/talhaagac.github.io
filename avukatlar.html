@@ -12,7 +12,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://agacsenturk.com/avukatlar" />
     <meta property="og:image" content="https://agacsenturk.com/assets/logo.png" />
-    <link rel="stylesheet" href="assets/editorial.css" />
     <style>
       :root { --burgundy:#7A001F; --black:#0B0B0B; --metallic:#A7A9AC; --light:#F3F4F6; --white:#fff; --darkblue:#000814 }
       body { 
@@ -69,48 +68,53 @@
         header nav { display:none; position:absolute; top:64px; left:0; right:0; padding:12px 16px 18px; background:#fff; border-bottom:1px solid var(--metallic); box-shadow:0 8px 16px rgba(0,0,0,.12); }
         header nav.open { display:flex; flex-direction:column; gap:4px; }
         header nav a { margin:0; padding:11px 8px; }
-        main section>div>div>div>div:first-child { flex-direction:column; text-align:center; }
         .chatbot-bubble { max-width:calc(100vw - 110px); }
       }
     </style>
+    <link rel="stylesheet" href="assets/editorial.css" />
   </head>
   <body>
-    <header>
+    <a class="skip-link" href="#main-content">İçeriğe geç</a>
+    <header class="site-header">
       <div class="container row">
         <a class="editorial-brand" href="index.html" aria-label="Ağaç ve Şentürk ana sayfa">
           <strong>Ağaç &amp; Şentürk</strong>
           <span>Hukuk Bürosu</span>
         </a>
-        <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="site-nav">☰</button>
-        <nav id="site-nav">
-          <a href="index.html#hakkimizda" class="burgundy">Hakkımızda</a>
+        <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="site-nav">
+          <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="site-nav" aria-label="Ana menü">
+          <a href="index.html">Ana Sayfa</a>
+          <a href="index.html#hakkimizda">Hakkımızda</a>
           <a href="index.html#calisma-alanlari">Çalışma Alanları</a>
-          <a href="avukatlar.html">Ekibimiz</a>
+          <a href="index.html#kentsel-donusum">Kentsel Dönüşüm</a>
+          <a href="avukatlar.html" aria-current="page">Ekibimiz</a>
           <a href="index.html#kariyer">Kariyer</a>
-          <a href="index.html#iletisim" class="contact-btn">İletişim</a>
+          <a href="iletisim.html" class="contact-btn">İletişim</a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section>
         <div class="container">
           <h1 style="font-size:32px;font-weight:800;color:var(--white);margin-bottom:18px;text-align:center">Ekibimiz</h1>
-          <div style="max-width:800px;margin:0 auto">
+          <div class="team-list">
             <!-- Av. Talha Ağaç -->
-            <div style="margin-bottom:80px;background:white;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1)">
-              <div style="display:flex;align-items:center;gap:32px;padding:32px;background:linear-gradient(135deg, var(--burgundy) 0%, var(--black) 100%)">
-                <div style="flex-shrink:0">
-                  <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,0.2)">
-                    <img src="assets/TA3G.jpg" alt="Av. Talha Ağaç" style="width:100%;height:100%;object-fit:cover;filter:grayscale(30%)" />
+            <div class="team-profile">
+              <div class="profile-heading">
+                <div class="profile-portrait-wrap">
+                  <div class="profile-portrait">
+                    <img src="assets/TA3G.jpg" alt="Av. Talha Ağaç" loading="lazy" />
                   </div>
                 </div>
-                <div style="flex-grow:1">
-                  <h3 style="color:white;font-size:32px;font-weight:700;margin:0">Av. Talha Ağaç</h3>
-                  <p style="color:rgba(255,255,255,0.9);margin:8px 0 0;font-size:18px;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:12px">Kurucu Ortak | Ağaç & Şentürk Hukuk Bürosu</p>
+                <div class="profile-title">
+                  <h2>Av. Talha Ağaç</h2>
+                  <p class="profile-role">Kurucu Ortak | Ağaç & Şentürk Hukuk Bürosu</p>
                 </div>
               </div>
-              <div style="padding:32px">
+              <div class="profile-bio">
                 <p style="color:#444;line-height:1.8;margin:0 0 16px">İstanbul Ticaret Üniversitesi Hukuk Fakültesi'nden mezun olan Av. Talha Ağaç, lisans eğitimi süresince özellikle ticaret hukuku, borçlar hukuku ve icra-iflas hukuku alanlarında uzmanlaşmıştır. Üniversite yıllarından itibaren çeşitli hukuk bürolarında edindiği deneyimlerle birlikte, farklı sektörlerde faaliyet gösteren şirketlere yönelik danışmanlık ve dava süreçlerinde aktif rol almıştır.</p>
                 <p style="color:#444;line-height:1.8;margin:16px 0">Ağaç & Şentürk Hukuk Bürosu'nun kurucu ortağı olarak, bireysel ve kurumsal müvekkillerine hukukun farklı disiplinlerinde etkin, çözüm odaklı ve stratejik yaklaşımlar sunmaktadır. Özellikle ticaret hukuku, sözleşmeler hukuku, iş hukuku ve ceza hukuku alanlarında yoğun olarak çalışmaktadır.</p>
                 <p style="color:#444;line-height:1.8;margin:16px 0 0">Disiplinli çalışma tarzı, müvekkil odaklı yaklaşımı ve hukuki süreçlerdeki analitik düşünme kabiliyeti ile bilinen Av. Talha Ağaç, aynı zamanda güncel mevzuat ve yargı kararlarını yakından takip ederek her bir dosyada özgün çözümler üretmeyi hedeflemektedir.</p>
@@ -118,19 +122,19 @@
             </div>
 
             <!-- Av. Yücel Şentürk -->
-            <div style="margin-bottom:80px;background:white;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1)">
-              <div style="display:flex;align-items:center;gap:32px;padding:32px;background:linear-gradient(135deg, var(--black) 0%, var(--burgundy) 100%)">
-                <div style="flex-shrink:0">
-                  <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,0.2)">
-                    <img src="assets/YS.png" alt="Av. Yücel Şentürk" style="width:100%;height:100%;object-fit:cover;filter:grayscale(30%)" />
+            <div class="team-profile">
+              <div class="profile-heading">
+                <div class="profile-portrait-wrap">
+                  <div class="profile-portrait">
+                    <img src="assets/YS.png" alt="Av. Yücel Şentürk" loading="lazy" />
                   </div>
                 </div>
-                <div style="flex-grow:1">
-                  <h3 style="color:white;font-size:32px;font-weight:700;margin:0">Av. Yücel Şentürk (LL.M)</h3>
-                  <p style="color:rgba(255,255,255,0.9);margin:8px 0 0;font-size:18px;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:12px">Kurucu Ortak | Ağaç & Şentürk Hukuk Bürosu</p>
+                <div class="profile-title">
+                  <h2>Av. Yücel Şentürk (LL.M)</h2>
+                  <p class="profile-role">Kurucu Ortak | Ağaç & Şentürk Hukuk Bürosu</p>
                 </div>
               </div>
-              <div style="padding:32px">
+              <div class="profile-bio">
                 <p style="color:#444;line-height:1.8;margin:0 0 16px">Av. Yücel Şentürk, lisans eğitimini İstanbul Ticaret Üniversitesi Hukuk Fakültesi'nde tamamlamış, ardından İstanbul Ticaret Üniversitesi Sosyal Bilimler Enstitüsü Özel Hukuk Yüksek Lisans Programından oy birliği ile kabul edilen “Anonim Şirket Genel Kurul Kararının İptali Davasının Usul Hukuku Bakımından Değerlendirilmesi” başlıklı tez çalışması ile mezun olmuştur. Akademik çalışmaları süresince özellikle borçlar hukuku, ticaret ve sözleşmeler hukuku ile medeni usul hukuku alanlarında derinleşmiştir.</p>
                 <p style="color:#444;line-height:1.8;margin:16px 0">Meslek hayatına başladığı günden bu yana, farklı ölçeklerdeki yerli ve yabancı şirketlere ticari sözleşmeler, kurumsal hukuk danışmanlığı ve uyuşmazlık çözümü konularında hukuki destek sağlamaktadır. Yargı süreçlerinde etkin temsil gücü ve stratejik yaklaşımıyla tanınan Av. Yücel Şentürk, aynı zamanda hukuki risk analizi ve önleyici hukuk danışmanlığı alanlarında da deneyim sahibidir.</p>
                 <p style="color:#444;line-height:1.8;margin:16px 0 0">Kurucu ortak olarak, müvekkillerine yalnızca mevcut sorunların çözümüne değil, geleceğe dönük hukuki stratejilerin oluşturulmasına odaklanan bir hizmet anlayışı sunmaktadır. İngilizce, Bulgarca ve Rusça yabancı dillerini bilmektedir.</p>
@@ -139,38 +143,38 @@
 
 
             <!-- Stj. Av. Feyzullah Yaşar -->
-            <div style="margin-bottom:80px;background:white;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1)">
-              <div style="display:flex;align-items:center;gap:32px;padding:32px;background:linear-gradient(135deg, var(--black) 0%, var(--burgundy) 70%)">
-                <div style="flex-shrink:0">
-                  <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,0.2)">
-                    <div style="width:100%;height:100%;background:linear-gradient(45deg, var(--burgundy), var(--black))"></div>
+            <div class="team-profile">
+              <div class="profile-heading">
+                <div class="profile-portrait-wrap">
+                  <div class="profile-portrait">
+                    <span class="profile-monogram" aria-hidden="true">FY</span>
                   </div>
                 </div>
-                <div style="flex-grow:1">
-                  <h3 style="color:white;font-size:32px;font-weight:700;margin:0">Stj. Av. Feyzullah Yaşar</h3>
-                  <p style="color:rgba(255,255,255,0.9);margin:8px 0 0;font-size:18px;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:12px">Stajyer Avukat | Ağaç & Şentürk Hukuk Bürosu</p>
+                <div class="profile-title">
+                  <h2>Stj. Av. Feyzullah Yaşar</h2>
+                  <p class="profile-role">Stajyer Avukat | Ağaç & Şentürk Hukuk Bürosu</p>
                 </div>
               </div>
-              <div style="padding:32px">
+              <div class="profile-bio">
                 <p style="color:#444;line-height:1.8;margin:0 0 16px">İstanbul Üniversitesi Hukuk Fakültesi'nden yüksek akademik başarı ile mezun olmuştur. Öğrenim hayatı boyunca ticaret hukuku, borçlar hukuku ve medeni usul hukuku alanlarında yoğun akademik çalışmalar yürütmüş; çeşitli öğrenci projeleri, seminerler ve bilimsel makaleler ile hukuk topluluklarında aktif rol almıştır.</p>
                 <p style="color:#444;line-height:1.8;margin:16px 0">Stajyer avukat olarak, dava dosyalarının hazırlanması, hukuki araştırmalar ve sözleşme incelemelerinde aktif katkı sunmaktadır. Ticaret ve sözleşmeler hukuku alanlarına ilgisi sayesinde projelerde yenilikçi ve sistematik bir yaklaşım benimsemektedir.</p>
               </div>
             </div>
 
             <!-- Uyap The LUNA -->
-            <div style="margin-bottom:80px;background:white;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1)">
-              <div style="display:flex;align-items:center;gap:32px;padding:32px;background:linear-gradient(135deg, var(--burgundy) 0%, var(--black) 80%)">
-                <div style="flex-shrink:0">
-                  <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,0.2)">
-                    <img src="assets/Luna.jpg" alt="Uyap The LUNA" style="width:100%;height:100%;object-fit:cover" />
+            <div class="team-profile">
+              <div class="profile-heading">
+                <div class="profile-portrait-wrap">
+                  <div class="profile-portrait">
+                    <img src="assets/Luna.jpg" alt="Uyap The LUNA" loading="lazy" />
                   </div>
                 </div>
-                <div style="flex-grow:1">
-                  <h3 style="color:white;font-size:32px;font-weight:700;margin:0">Uyap The LUNA</h3>
-                  <p style="color:rgba(255,255,255,0.9);margin:8px 0 0;font-size:18px;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:12px">Psikolojik Destek ve Güvenlik Birimi Yöneticisi</p>
+                <div class="profile-title">
+                  <h2>Uyap The LUNA</h2>
+                  <p class="profile-role">Psikolojik Destek ve Güvenlik Birimi Yöneticisi</p>
                 </div>
               </div>
-              <div style="padding:32px">
+              <div class="profile-bio">
                 <p style="color:#444;line-height:1.8;margin:0 0 16px">LUNA, insan psikolojisi ve duygusal durum değişiklikleri üzerine "sezgisel" uzmanlığıyla ekibimizin motivasyonuna katkı sunar; ofisteki stresin azaltılması ve olumlu çalışma atmosferinin sürdürülmesinde aktif rol oynar.</p>
                 <p style="color:#444;line-height:1.8;margin:16px 0 0">Aynı zamanda ofisin güvenlik ve pozitif enerjisinden sorumludur; ziyaretçileri güler yüzle karşılar, ekip içi uyumu güçlendirir ve yoğun mesai günlerinde moral kaynağı olur.</p>
               </div>
@@ -180,34 +184,30 @@
       </section>
     </main>
 
-    <footer style="background:var(--white);border-top:1px solid var(--metallic);padding:40px 0;color:var(--black)">
+    <footer class="site-footer">
       <div class="container">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px;margin-bottom:40px">
-          <div>
-            <img src="assets/logo.png" alt="AĞAÇ & ŞENTÜRK LAW OFFICE" style="height:60px;width:auto;margin-bottom:16px" />
-            <p style="color:#666;line-height:1.6;margin:12px 0">
-              Kurumsal, güvenilir ve sonuç odaklı hukuki çözüm ortağınız.
-            </p>
+        <div class="footer-grid">
+          <div class="footer-identity">
+            <a class="footer-brand" href="index.html">Ağaç &amp; Şentürk</a>
+            <p class="footer-kicker">Hukuk Bürosu · İstanbul</p>
+            <p>Hukuki danışmanlık ve avukatlık hizmetleri.</p>
           </div>
           <div>
-            <h3 style="font-size:18px;color:var(--burgundy);margin-bottom:16px">İletişim</h3>
-            <p style="color:#666;line-height:1.6;margin:12px 0">
-              Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10<br/>
-              34403 Kağıthane/İstanbul
-            </p>
-            <p style="margin:12px 0">
-              <a href="tel:+905454402501" style="color:var(--burgundy);text-decoration:none">+90 545 440 2501</a><br/>
-              <a href="mailto:agacsenturk@gmail.com" style="color:var(--burgundy);text-decoration:none">agacsenturk@gmail.com</a>
-            </p>
+            <h2>İletişim</h2>
+            <p>Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10<br />34403 Kağıthane/İstanbul</p>
+            <p><a href="tel:+905454402501">+90 545 440 2501</a><br /><a href="mailto:agacsenturk@gmail.com">agacsenturk@gmail.com</a></p>
           </div>
           <div>
-            <h3 style="font-size:18px;color:var(--burgundy);margin-bottom:16px">Yasal Metinler</h3>
-            <p><a href="kvkk-aydinlatma-metni.html" style="color:var(--burgundy)">KVKK Aydınlatma Metni</a><br><a href="cerez-politikasi.html" style="color:var(--burgundy)">Çerez Politikası</a></p>
+            <h2>Yasal Metinler</h2>
+            <ul class="footer-links">
+              <li><a href="kvkk-aydinlatma-metni.html">KVKK Aydınlatma Metni</a></li>
+              <li><a href="cerez-politikasi.html">Çerez Politikası</a></li>
+            </ul>
           </div>
         </div>
-        <div style="text-align:center;padding-top:20px;border-top:1px solid var(--metallic)">
-          <p style="color:#666;margin:0 0 6px">© <span id="y"></span> Ağaç & Şentürk Law Office. Tüm hakları saklıdır.</p>
-          <p style="color:#666;opacity:0.8;font-size:14px;margin:0">Bu websitesi Avukat Talha AĞAÇ tarafından hazırlanmıştır.</p>
+        <div class="footer-bottom">
+          <p>© <span id="y"></span> Ağaç &amp; Şentürk Law Office. Tüm hakları saklıdır.</p>
+          <p>Bu websitesi Avukat Talha AĞAÇ tarafından hazırlanmıştır.</p>
         </div>
       </div>
     </footer>
@@ -282,8 +282,20 @@
       menuButton.addEventListener('click', function(){
         const open = siteNav.classList.toggle('open');
         menuButton.setAttribute('aria-expanded', String(open));
+        menuButton.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
       });
-      siteNav.querySelectorAll('a').forEach(function(link){ link.addEventListener('click', function(){ siteNav.classList.remove('open'); menuButton.setAttribute('aria-expanded','false'); }); });
+      function closeMenu() {
+        siteNav.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Menüyü aç');
+      }
+      siteNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && siteNav.classList.contains('open')) {
+          closeMenu();
+          menuButton.focus();
+        }
+      });
     </script>
   </body>
   </html>
