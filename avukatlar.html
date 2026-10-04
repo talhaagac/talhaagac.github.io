@@ -4,22 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Avukatlarımız — Ağaç & Şentürk Law Office</title>
-    <link rel="canonical" href="https://www.agacsenturk.com/avukatlar" />
+    <link rel="canonical" href="https://agacsenturk.com/avukatlar" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <meta name="description" content="Ağaç & Şentürk Law Office — Avukatlarımız" />
     <meta property="og:title" content="Avukatlarımız — Ağaç & Şentürk Law Office" />
     <meta property="og:description" content="Ağaç & Şentürk Law Office — Avukatlarımız" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.agacsenturk.com/avukatlar" />
-    <meta property="og:image" content="assets/logo.png" />
-    <link rel="stylesheet" href="https://use.typekit.net/[your-kit-code].css">
+    <meta property="og:url" content="https://agacsenturk.com/avukatlar" />
+    <meta property="og:image" content="https://agacsenturk.com/assets/logo.png" />
+    <link rel="stylesheet" href="assets/editorial.css" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Trajan+Pro:wght@400;600&display=swap');
       :root { --burgundy:#7A001F; --black:#0B0B0B; --metallic:#A7A9AC; --light:#F3F4F6; --white:#fff; --darkblue:#000814 }
       body { 
         margin:0; 
         font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; 
         color: var(--black);
-        background: url('assets/ChatGPT Image 4 Eki 2025 16_59_32.png') fixed;
+        background: url('assets/site-background.webp') fixed;
         background-size: cover;
         background-position: center;
         position: relative;
@@ -36,6 +36,7 @@
       header nav a.burgundy { color: var(--burgundy); }
       header nav a.contact-btn { background: var(--black); color: var(--white); padding: 8px 16px; border-radius: 20px; }
       header nav a.blogs-btn { background: var(--darkblue); color: var(--white); padding: 8px 16px; border-radius: 20px; }
+      .menu-toggle { display:none; border:0; background:transparent; font-size:28px; cursor:pointer; padding:6px 10px; }
       .logo { height: 36px; object-fit: contain; mix-blend-mode: multiply; }
       h1,h2 { letter-spacing:.5px }
       section { padding: 48px 0; }
@@ -63,22 +64,29 @@
       .chatbot-form { display:flex; gap:8px; margin-top:8px }
       .chatbot-input { flex:1; padding:8px 10px; border-radius:8px; border:1px solid rgba(255,255,255,.15); background:rgba(0,0,0,.2); color:#fff; outline:none }
       .chatbot-send { padding:8px 12px; border-radius:8px; border:0; background:#374151; color:#fff; cursor:pointer }
+      @media (max-width: 760px) {
+        .menu-toggle { display:block; }
+        header nav { display:none; position:absolute; top:64px; left:0; right:0; padding:12px 16px 18px; background:#fff; border-bottom:1px solid var(--metallic); box-shadow:0 8px 16px rgba(0,0,0,.12); }
+        header nav.open { display:flex; flex-direction:column; gap:4px; }
+        header nav a { margin:0; padding:11px 8px; }
+        main section>div>div>div>div:first-child { flex-direction:column; text-align:center; }
+        .chatbot-bubble { max-width:calc(100vw - 110px); }
+      }
     </style>
   </head>
   <body>
     <header>
       <div class="container row">
-        <div style="display:flex;align-items:center;gap:12px">
-          <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit">
-            <img src="assets/logo.png" alt="AĞAÇ & ŞENTÜRK LAW OFFICE" style="height:50px;width:auto;object-fit:contain" />
-          </a>
-        </div>
-        <nav>
+        <a class="editorial-brand" href="index.html" aria-label="Ağaç ve Şentürk ana sayfa">
+          <strong>Ağaç &amp; Şentürk</strong>
+          <span>Hukuk Bürosu</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="site-nav">☰</button>
+        <nav id="site-nav">
           <a href="index.html#hakkimizda" class="burgundy">Hakkımızda</a>
           <a href="index.html#calisma-alanlari">Çalışma Alanları</a>
           <a href="avukatlar.html">Ekibimiz</a>
           <a href="index.html#kariyer">Kariyer</a>
-          <a href="index.html#blogs" class="blogs-btn">Blogs</a>
           <a href="index.html#iletisim" class="contact-btn">İletişim</a>
         </nav>
       </div>
@@ -189,15 +197,12 @@
             </p>
             <p style="margin:12px 0">
               <a href="tel:+905454402501" style="color:var(--burgundy);text-decoration:none">+90 545 440 2501</a><br/>
-              <a href="mailto:info@agacsenturk.com" style="color:var(--burgundy);text-decoration:none">info@agacsenturk.com</a>
+              <a href="mailto:agacsenturk@gmail.com" style="color:var(--burgundy);text-decoration:none">agacsenturk@gmail.com</a>
             </p>
           </div>
           <div>
-            <h3 style="font-size:18px;color:var(--burgundy);margin-bottom:16px">Sosyal Medya</h3>
-            <div style="display:flex;gap:12px">
-              <a href="#" target="_blank" rel="noopener" style="width:36px;height:36px;border-radius:50%;background:var(--burgundy);display:flex;align-items:center;justify-content:center;color:white;text-decoration:none">in</a>
-              <a href="#" target="_blank" rel="noopener" style="width:36px;height:36px;border-radius:50%;background:var(--burgundy);display:flex;align-items:center;justify-content:center;color:white;text-decoration:none">X</a>
-            </div>
+            <h3 style="font-size:18px;color:var(--burgundy);margin-bottom:16px">Yasal Metinler</h3>
+            <p><a href="kvkk-aydinlatma-metni.html" style="color:var(--burgundy)">KVKK Aydınlatma Metni</a><br><a href="cerez-politikasi.html" style="color:var(--burgundy)">Çerez Politikası</a></p>
           </div>
         </div>
         <div style="text-align:center;padding-top:20px;border-top:1px solid var(--metallic)">
@@ -225,7 +230,7 @@
         </form>
       </div>
       <button class="chatbot-fab" id="ng-fab" aria-label="Sohbeti aç/kapat">
-        <img src="assets/ASG.png" alt="Av. NG" onerror="this.style.display='none'; this.previousElementSibling && (this.previousElementSibling.style.display='flex')">
+        <img src="assets/av-ng.webp" alt="Av. NG" width="360" height="360" onerror="this.style.display='none'; this.previousElementSibling && (this.previousElementSibling.style.display='flex')">
         <span class="chatbot-initials">NG</span>
       </button>
     </div>
@@ -239,10 +244,10 @@
       const form = document.getElementById('ng-form');
       const input = document.getElementById('ng-input');
       const msgs = document.getElementById('ng-msgs');
-      const AUTO_REPLY = 'Bu konuda avukatlarımız ile iletişime geçmenizi öneriyorum.\nİletişim için: Telefon: +90 545 440 2501 - E-posta: info@agacsenturk.com\nVeya tüm hukuki sorunlarınıza çözüm bulmak amacıyla ofisimize Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10,\n34403 Kağıthane/İstanbul adresinden ulaşabilirsiniz.';
+      const AUTO_REPLY = 'Bu konuda avukatlarımız ile iletişime geçmenizi öneriyorum.\nİletişim için: Telefon: +90 545 440 2501 - E-posta: agacsenturk@gmail.com\nOfisimize Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10,\n34403 Kağıthane/İstanbul adresinden ulaşabilirsiniz.';
       const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=A%C4%9Fa%C3%A7%20%26%20%C5%9Eent%C3%BCrk%20Law%20Office%2C%20Ka%C4%9F%C4%B1thane%2F%C4%B0stanbul';
       const MAP_REPLY = 'Adresimiz: Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10, 34403 Kağıthane/İstanbul\n<a href="'+MAPS_URL+'" target="_blank" rel="noopener">Google Haritalar\'da Aç</a>';
-      const CONTACT_REPLY = 'Telefon: +90 545 440 2501\nE-posta: info@agacsenturk.com';
+      const CONTACT_REPLY = 'Telefon: +90 545 440 2501\nE-posta: agacsenturk@gmail.com';
       function sendMessage(val){
         if(!val) return;
         const user = document.createElement('p');
@@ -272,8 +277,13 @@
           sendMessage(this.getAttribute('data-msg'));
         });
       });
+      const menuButton = document.querySelector('.menu-toggle');
+      const siteNav = document.getElementById('site-nav');
+      menuButton.addEventListener('click', function(){
+        const open = siteNav.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded', String(open));
+      });
+      siteNav.querySelectorAll('a').forEach(function(link){ link.addEventListener('click', function(){ siteNav.classList.remove('open'); menuButton.setAttribute('aria-expanded','false'); }); });
     </script>
   </body>
   </html>
-
-

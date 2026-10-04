@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ağaç Şentürk Law Office</title>
     <meta name="description" content="Ağaç & Şentürk Law Office — Kurumsal, güvenilir ve sonuç odaklı hukuki danışmanlık." />
-    <link rel="canonical" href="https://www.agacsenturk.com/" />
+    <link rel="canonical" href="https://agacsenturk.com/" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <meta property="og:title" content="Ağaç Şentürk Law Office" />
     <meta property="og:description" content="Kurumsal, güvenilir ve sonuç odaklı hukuki danışmanlık." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.agacsenturk.com/" />
-    <meta property="og:image" content="assets/logo.png" />
+    <meta property="og:url" content="https://agacsenturk.com/" />
+    <meta property="og:image" content="https://agacsenturk.com/assets/logo.png" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="alternate icon" href="assets/favicon.svg" />
     <meta name="theme-color" content="#7A001F" />
+    <link rel="stylesheet" href="assets/editorial.css" />
     <style>
       :root {
         --burgundy: #7A001F;
@@ -36,7 +38,7 @@
         overflow-x: hidden;
       }
       /* iOS ve mobilde fixed arka plan uyumluluğu için ayrı katman */
-      .bg-cover { position: fixed; inset: 0; background: url('assets/ChatGPT Image 4 Eki 2025 16_59_32.png') center/cover no-repeat; z-index: -2; -webkit-transform: translateZ(0); transform: translateZ(0); }
+      .bg-cover { position: fixed; inset: 0; background: url('assets/site-background.webp') center/cover no-repeat; z-index: -2; -webkit-transform: translateZ(0); transform: translateZ(0); }
       /* Arka plan overlay kaldırıldı */
       main {
         position: relative;
@@ -277,8 +279,9 @@
         "@context": "https://schema.org",
         "@type": "LegalService",
         "name": "Ağaç & Şentürk Law Office",
-        "url": "https://www.agacsenturk.com/",
-        "logo": "https://www.agacsenturk.com/assets/logo.png",
+        "url": "https://agacsenturk.com/",
+        "logo": "https://agacsenturk.com/assets/logo.png",
+        "email": "agacsenturk@gmail.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Hürriyet, Dr. Cemil Bengü Cd. No:34 K:5, D:10",
@@ -295,11 +298,10 @@
     <div class="bg-cover" aria-hidden="true"></div>
     <header>
       <div class="container row">
-        <div style="display:flex;align-items:center;gap:12px">
-          <a href="index.html" style="display:block">
-            <img src="assets/logo.png" alt="AĞAÇ & ŞENTÜRK LAW OFFICE" style="height:50px;width:auto;object-fit:contain" />
-          </a>
-        </div>
+        <a class="editorial-brand" href="index.html" aria-label="Ağaç ve Şentürk ana sayfa">
+          <strong>Ağaç &amp; Şentürk</strong>
+          <span>Hukuk Bürosu</span>
+        </a>
         <button class="menu-btn" aria-label="Menüyü aç/kapat">
           <span></span><span></span><span></span>
         </button>
@@ -309,7 +311,6 @@
           <a href="#kentsel-donusum">Kentsel Dönüşüm</a>
           <a href="avukatlar.html">Ekibimiz</a>
           <a href="#kariyer">Kariyer</a>
-          <a href="#blogs" class="blogs-btn">Blogs</a>
           <a href="#iletisim" class="contact-btn">İletişim</a>
         </nav>
       </div>
@@ -317,17 +318,17 @@
 
     <main>
       <section class="hero">
-        <div class="container wrap">
-          <div style="margin-bottom:24px;display:flex;justify-content:center">
-            <svg width="80" height="80" viewBox="0 0 1000 1000" fill="currentColor" style="margin:0 auto">
-              <path d="M500 100c-20 0-36 16-36 36v50l-100 150h272l-100-150v-50c0-20-16-36-36-36zM336 386v50c0 90.75 73.25 164 164 164s164-73.25 164-164v-50H336zM300 650v100h400V650H300zM250 800v100h500V800H250zM200 950v50h600v-50H200z"/>
-            </svg>
+        <div class="container wrap editorial-hero">
+          <div class="hero-copy">
+            <span class="eyebrow">Ağaç &amp; Şentürk Hukuk Bürosu</span>
+            <h1>Hukukta strateji,<br />çözümde kararlılık.</h1>
+            <p class="hero-deck">Müvekkillerimizin bugününü güvence altına alırken yarınını da gözeten; araştırmaya, açık iletişime ve somut sonuca dayalı hukuki hizmet sunuyoruz.</p>
+            <a href="#iletisim" class="btn btn-primary">İletişime geçin →</a>
           </div>
-          <h1 style="font-size:42px;font-weight:800">AĞAÇ & ŞENTÜRK LAW OFFICE</h1>
-          <p class="muted" style="color:#E5E7EB;margin-top:12px">Kurumsal, güvenilir ve sonuç odaklı hukuki çözüm ortağınız</p>
-          <div style="display:flex;justify-content:center;margin-top:28px">
-            <a href="#iletisim" class="btn btn-primary">Hukuki Danışmanlık</a>
-          </div>
+          <figure class="hero-media">
+            <img src="assets/site-background.webp" alt="İstanbul'da klasik mimari detay" width="1536" height="1024" />
+            <figcaption>İstanbul • Türkiye — Bireysel ve kurumsal hukuki danışmanlık</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -475,30 +476,6 @@
         </div>
       </section>
 
-      <section id="blogs" style="background:var(--darkblue);color:var(--white);padding:80px 0; overflow:hidden">
-        <div class="container">
-          <h2 style="font-size:38px;font-weight:800;color:#fff;margin-bottom:24px;text-align:center;letter-spacing:0.5px">Blogs</h2>
-          <p style="text-align:center;max-width:800px;margin:0 auto 40px;color:#E5E7EB;font-size:16px;line-height:1.6">Güncel hukuki gelişmeler, içgörüler ve bültenler.</p>
-          <div class="blogs-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:20px">
-            <article class="blog-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:20px;min-width:0">
-              <h3 style="margin:0 0 10px;font-size:20px;color:#fff">Ticaret Hukukunda Güncel Değişiklikler</h3>
-              <p style="margin:0 0 14px;color:#D1D5DB;line-height:1.7">Şirket birleşmeleri ve sözleşme yönetiminde son düzenlemelerin kısa özeti.</p>
-              <a href="#" style="color:#BBD0FF;text-decoration:none">Devamını oku</a>
-            </article>
-            <article class="blog-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:20px;min-width:0">
-              <h3 style="margin:0 0 10px;font-size:20px;color:#fff">KVKK ve GDPR Uyum Rehberi</h3>
-              <p style="margin:0 0 14px;color:#D1D5DB;line-height:1.7">Veri işleme süreçlerinde dikkat edilmesi gereken başlıklar.</p>
-              <a href="#" style="color:#BBD0FF;text-decoration:none">Devamını oku</a>
-            </article>
-            <article class="blog-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:20px;min-width:0">
-              <h3 style="margin:0 0 10px;font-size:20px;color:#fff">İş Hukukunda Yargı İçtihatları</h3>
-              <p style="margin:0 0 14px;color:#D1D5DB;line-height:1.7">Son dönemde öne çıkan kararların kısa analizi.</p>
-              <a href="#" style="color:#BBD0FF;text-decoration:none">Devamını oku</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section id="kariyer" style="background:linear-gradient(135deg, rgba(11,11,11,.8) 0%, rgba(122,0,31,.7) 60%, rgba(11,11,11,.8) 100%);color:var(--white);position:relative">
         <div class="container">
           <h2 style="font-size:32px;font-weight:800;color:var(--white);margin-bottom:18px">Kariyer</h2>
@@ -563,7 +540,8 @@
             </div>
             
             <div style="border-radius:12px;overflow:hidden;height:400px;box-shadow:0 4px 20px rgba(0,0,0,0.05)">
-              <iframe 
+              <iframe
+                title="Ağaç & Şentürk Hukuk Bürosu konumu"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.5750478496386!2d28.974843!3d41.069821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab71f13ca6e2f%3A0x84e6d1aa816b5237!2zSMO8cnJpeWV0LCBEci4gQ2VtaWwgQmVuZ8O8IENkLiBObzozNCwgMzQ0MDMgS2HEn8SxdGhhbmUvxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1710101234567!5m2!1str!2str"
                 width="100%" 
                 height="100%" 
@@ -582,7 +560,7 @@
         <div class="container">
           <div class="section-sep" aria-hidden="true"></div>
           <h2 style="font-size:32px;font-weight:800;color:var(--burgundy);margin-bottom:18px;text-align:center">Hızlı Randevu</h2>
-          <p style="text-align:center;max-width:720px;margin:0 auto 28px;color:#666">Aşağıdaki formu doldurun; talebiniz <strong>agacsenturk@gmail.com</strong> adresimize iletilecek ve en kısa sürede sizi arayacağız.</p>
+          <p style="text-align:center;max-width:720px;margin:0 auto 28px;color:#666">Form, cihazınızdaki e-posta uygulamasında bir randevu e-postası hazırlar. Talebin ulaşması için açılan e-postayı göndermeniz gerekir.</p>
           <form id="randevuForm" style="max-width:760px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:14px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:20px;box-shadow:0 6px 20px rgba(0,0,0,.05)">
             <div style="display:flex;flex-direction:column;gap:6px">
               <label for="ad" style="font-weight:600;color:#333">Ad</label>
@@ -607,7 +585,8 @@
             <div style="display:flex;align-items:flex-end;gap:6px">
               <button id="randevuGonder" type="submit" class="btn" style="background:var(--burgundy);color:#fff;border:none;padding:12px 18px;border-radius:8px;font-weight:700">Gönder</button>
             </div>
-            <p id="randevuSonuc" style="grid-column:1/-1;margin:6px 0 0;color:#166534;display:none">Talebiniz alınmıştır, en kısa sürede sizinle iletişime geçeceğiz.</p>
+            <label style="grid-column:1/-1;display:flex;gap:8px;align-items:flex-start;font-size:14px;color:#4b5563"><input type="checkbox" required style="margin-top:3px" /> <span><a href="kvkk-aydinlatma-metni.html" style="color:var(--burgundy)">KVKK Aydınlatma Metni</a>'ni okudum.</span></label>
+            <p id="randevuSonuc" style="grid-column:1/-1;margin:6px 0 0;color:#166534;display:none">E-posta uygulamanız açıldı. Talebinizin ulaşması için e-postayı göndermeniz gerekir.</p>
           </form>
         </div>
       </section>
@@ -619,7 +598,7 @@
             <div style="background:white;padding:30px 40px;border-radius:30px;box-shadow:0 4px 15px rgba(0,0,0,0.1);flex:0 0 400px">
               <img src="assets/logo.png" alt="AĞAÇ & ŞENTÜRK LAW OFFICE" style="width:100%;height:auto;display:block;margin-bottom:15px" />
               <p style="color:#333;margin:0;text-align:center;font-size:14px;line-height:1.6">
-                Kurumsal, güvenilir ve sonuç odaklı hukuki çözüm ortağınız.
+                Hukuki danışmanlık ve avukatlık hizmetleri.
               </p>
             </div>
             <div style="flex:0 0 300px">
@@ -636,13 +615,8 @@
             <div style="flex:0 0 300px">
               <h3 style="font-size:18px;color:var(--white);margin-bottom:16px;font-weight:600">Yasal Metinlerimiz</h3>
               <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px">
-                <a href="#" style="color:var(--white);text-decoration:none;opacity:0.9;font-size:14px">KVK Aydınlatma Metni</a>
-                <a href="#" style="color:var(--white);text-decoration:none;opacity:0.9;font-size:14px">Çerez Politikası</a>
-              </div>
-              <h3 style="font-size:18px;color:var(--white);margin-bottom:16px;font-weight:600">Sosyal Medya</h3>
-              <div style="display:flex;gap:12px">
-                <a href="#" target="_blank" rel="noopener" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;transition:all 0.3s ease">in</a>
-                <a href="#" target="_blank" rel="noopener" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;transition:all 0.3s ease">X</a>
+                <a href="kvkk-aydinlatma-metni.html" style="color:var(--white);text-decoration:none;opacity:0.9;font-size:14px">KVKK Aydınlatma Metni</a>
+                <a href="cerez-politikasi.html" style="color:var(--white);text-decoration:none;opacity:0.9;font-size:14px">Çerez Politikası</a>
               </div>
             </div>
           </div>
@@ -673,7 +647,7 @@
         </form>
       </div>
       <button class="chatbot-fab" id="ng-fab" aria-label="Sohbeti aç/kapat">
-        <img src="assets/ASG.png" alt="Av. NG" onerror="this.style.display='none'; this.previousElementSibling && (this.previousElementSibling.style.display='flex')">
+        <img src="assets/av-ng.webp" alt="Av. NG" width="360" height="360" onerror="this.style.display='none'; this.previousElementSibling && (this.previousElementSibling.style.display='flex')">
         <span class="chatbot-initials">NG</span>
       </button>
     </div>
