@@ -1,2 +1,2 @@
 # talhaagac.github.io
-Ağaç &amp; Şentürk Law Office Website
+Ağaç &amp; Şentürk Website
