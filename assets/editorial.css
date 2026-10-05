@@ -39,7 +39,7 @@ header {
   padding-top: 20px;
 }
 header::before {
-  content: "İSTANBUL  •  HUKUK BÜROSU";
+  content: "İSTANBUL";
   display: block;
   max-width: 1324px;
   margin: 0 auto;
@@ -71,12 +71,6 @@ header .row {
   font: 400 clamp(40px,7.2vw,108px)/1.08 var(--display);
   letter-spacing: -.035em;
   text-transform: uppercase;
-}
-.editorial-brand span {
-  display: block;
-  margin-top: 10px;
-  font: 500 10px/1.4 var(--sans);
-  letter-spacing: .34em;
 }
 .site-header nav {
   grid-column: 1 / -1;
@@ -354,7 +348,6 @@ body > main > section:first-child:not(.hero) .card [style*="color:white"] { colo
   header .row { border-top: 0; padding-block: 14px; gap: 12px; }
   .editorial-brand { grid-column: 1; text-align: left; padding: 0; }
   .editorial-brand strong { font-size: clamp(24px,5.5vw,40px); }
-  .editorial-brand span { font-size: 8px; margin-top: 5px; }
   .site-header .menu-btn, .site-header .menu-toggle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--rule); background: transparent; color: var(--ink); cursor: pointer; font-size: 24px; }
   .site-header .menu-btn span { display: inline; width: auto; height: auto; margin: 0; background: none; }
   .site-header nav {
